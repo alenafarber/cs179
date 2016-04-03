@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="home">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>My Page</h1>
+		<a href="#home" data-icon="back" class="ui-btn-left" data-rel="back" data-direction="reverse">Back</a>
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-transition="pop">Home</a></li>
+			<li><a href="#alena" data-transition="pop">Alena</a></li>
+		</ul>
+		</div>
+	</div>
+
+	<div data-role="content">
+		<p>Page content goes here.</p>
+		<div><p>Here</p>
+		<ul data-role="listview" data-inset="true">             
+			<li><a href="http://acura.com">Acura</a></li>
+			<li><a href="http://audi.com">Audi</a></li>
+			<li><a href="http://bmw.com">BMW</a></li>
+		</ul>
+		</div>
+		<br />
+		<a href="http://google.com" data-role="button">Google</a>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="footer" data-position="fixed">
+		<h4>Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="alena">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>My Page</h1>
+		<a href="#home" data-icon="back" class="ui-btn-left" data-rel="back" data-direction="reverse">Back</a>
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-transition="pop">Home</a></li>
+			<li><a href="#alena" data-transition="pop">Alena</a></li>
+		</ul>
+		</div>
+	</div>
+
+	<div data-role="content">
+		<p>Page content goes here.</p>
+		<div><p>Here</p>
+		<ul data-role="listview" data-inset="true">             
+			<li>HELLO</li>
+			<li>STILL HELLO</li>
+		</ul>
+		</div>
+		<br />
+		<a href="http://google.com" data-role="button">Google</a>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="footer" data-position="fixed">
+		<h4>Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
