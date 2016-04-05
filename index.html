@@ -1,40 +1,325 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Page Title</title>
+	<title>FitFeats</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/jqm-icon-pack-fa.css" />
+	<link rel="stylesheet" href="css/custom.css" />
 	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen" />
+
 </head>
 <body>
 
-<div data-role="page" id="home">
+<div data-role="page" id="newsfeed">
 
 	<div data-role="header" data-id="header" data-position="fixed">
-		<h1>My Page</h1>
-		<a href="#home" data-icon="back" class="ui-btn-left" data-rel="back" data-direction="reverse">Back</a>
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true">             
+			<li><img src="img/Alena.jpg">Alena completed the Manhattan Marathon!</li>
+			<li><img src="img/Kavya.jpg">Kavya completed the Mt. Everest Hike!</li>
+			<li><img src="img/Catherine.jpg">Catherine completed the BMW Lift Challenge!</li>
+		</ul>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 		<ul>
-			<li><a href="#home" data-transition="pop">Home</a></li>
-			<li><a href="#alena" data-transition="pop">Alena</a></li>
+			<li><a href="#profile" data-icon="female">Profile</a></li>
+			<li><a href="#trophy" data-icon="external-link3">Trophy Case</a></li>
+			<li><a href="#time" data-icon="greencheck" style="color: green;">New Challenge</a></li>
+			<li><a href="#newsfeed" data-icon="rss" class="ui-btn-active ui-state-persist">Newsfeed</a></li>
+			<li><a href="#friends" data-icon="group">Friends</a></li>
+		</ul>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="profile">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content">
+		<div id="user-info">
+			<img src="img/Emma.jpg" width="70px">
+			<p class="instructions">Change Picture</p>
+			<div class="even-space">
+				<div>
+				Height: 5' 5"
+				<p class="instructions">Edit</p>
+				</div>
+				<div>
+				Weight: 125 lbs
+				<p class="instructions">Edit</p>
+				</div>
+			</div>
+		</div>
+		<div id="current-chal">
+			<h4>Current Challenges</h4>
+			<ul data-role="listview" data-inset="true">             
+				<li><img src="img/run.png" class="ui-li-icon">Manhattan Marathon</li>
+			</ul>
+		</div>
+		<div id="done-chal">
+			<h4>Completed Challenges</h4>
+			<ul data-role="listview" data-inset="true">             
+				<li><img src="img/run.png" class="ui-li-icon">Great Wall Walk</li>
+				<li><img src="img/run.png" class="ui-li-icon">Tour de France</li>
+			</ul>
+		</div>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#profile" data-icon="female" class="ui-btn-active ui-state-persist">Profile</a></li>
+			<li><a href="#trophy" data-icon="external-link3">Trophy Case</a></li>
+			<li><a href="#time" data-icon="greencheck" style="color: green;">New Challenge</a></li>
+			<li><a href="#newsfeed" data-icon="rss">Newsfeed</a></li>
+			<li><a href="#friends" data-icon="group">Friends</a></li>
+		</ul>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="trophy">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content">
+		<div data-role="collapsible-set" data-inset="true">
+			<div data-role="collapsible" data-collapsed-icon="external-link3" data-expanded-icon="external-link3">
+				<h3>Total Miles Run<div class="ui-li-count">47</div></h3>
+				<ul>
+					<li>Manhattan Marathon</li>
+					<li>Another Running Challenge TBD by Us</li>
+				</ul>
+			</div>
+			<div data-role="collapsible" data-collapsed-icon="external-link3" data-expanded-icon="external-link3">
+				<h3>Total Miles Biked<div class="ui-li-count">23</div></h3>
+				<ul>
+					<li>Tour de France Challenge</li>
+					<li>Cross-Country Bike Challenge</li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#profile" data-icon="female">Profile</a></li>
+			<li><a href="#trophy" data-icon="external-link3" class="ui-btn-active ui-state-persist">Trophy Case</a></li>
+			<li><a href="#time" data-icon="greencheck" style="color: green;">New Challenge</a></li>
+			<li><a href="#newsfeed" data-icon="rss">Newsfeed</a></li>
+			<li><a href="#friends" data-icon="group">Friends</a></li>
+		</ul>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="friends">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content">
+		<div id="friend-list">
+			<div class="friend">
+				<img src="img/Alena.jpg">
+				<h4>Alena</h4>
+			</div>
+			<div class="friend">
+				<img src="img/Kavya.jpg">
+				<h4>Kavya</h4>
+			</div>
+			<div class="friend">
+				<img src="img/Catherine.jpg">
+				<h4>Catherine</h4>
+			</div>
+		</div>
+		<div id="invite">
+			<h3>Invite Your Friends!</h3>
+			<a href="http://facebook.com" data-role="button" data-icon="facebook-square" data-iconpos="notext">Facebook</a>
+			<a href="http://contacts.google.com" data-role="button" data-icon="phone" data-iconpos="notext">Contacts</a>
+			<a href="http://gmail.com" data-role="button" data-icon="envelope" data-iconpos="notext">Email</a>
+		</div>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#profile" data-icon="female">Profile</a></li>
+			<li><a href="#trophy" data-icon="external-link3">Trophy Case</a></li>
+			<li><a href="#time" data-icon="greencheck" style="color: green;">New Challenge</a></li>
+			<li><a href="#newsfeed" data-icon="rss">Newsfeed</a></li>
+			<li><a href="#friends" data-icon="group" class="ui-btn-active ui-state-persist">Friends</a></li>
+		</ul>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+
+<div data-role="page" id="time">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content">
+		<label for="select-native-2" style="text-align:center; font-size:1.5em">I have:</label>
+		<select name="select-native-2" id="select-native-2">
+		   <option value="20m">20 min</option>
+		   <option value="30m">30 min</option>
+		   <option value="45m">45 min</option>
+		   <option value="1hr">1 hour</option>
+		   <option value="1hr30m">1 hour 30 min</option>
+		   <option value="2hr">2 hours+</option>
+		</select>
+
+		<br/>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#newsfeed" data-iconpos="left" data-icon="arrow-l">Cancel</a></li> <!-- back to Newsfeed, not implemented yet -->
+			<li><a href="#goals" data-iconpos="right" data-icon="arrow-r">Next</a></li>
+		</ul>
+	</div>
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+
+<div data-role="page" id="goals">
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content">
+		<p style="text-align:center; font-size:1.5em">I want to:</p>
+		<div>
+		<ul data-role="listview" data-inset="true">     
+			<label><input type="checkbox" name="checkbox-0"/> Lose weight</label>
+			<label><input type="checkbox" name="checkbox-0"/> Get stronger </label>
+			<label><input type="checkbox" name="checkbox-0"/> Increase endurance </label>        
+		</ul>
+		</div>
+	</div><!-- /content -->
+
+
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#time" data-iconpos="left" data-icon="arrow-l">Back</a></li>
+			<li><a href="#focus" data-iconpos="right" data-icon="arrow-r">Next</a></li>
+		</ul>
+	</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="focus">
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content">
+		<p style="text-align:center; font-size:1.5em">Focus on my:</p>
+		<div style="text-align: center">
+		<img src="img/body annotated.png" width="203" height="555" alt="Body" usemap="#bodymap">
+
+		<map name="bodymap">
+		  <area shape="rect" coords="26,87,179,125" href="shoulders.gif" alt="Shoulders">
+		  <area shape="rect" coords="63,167,150,246" href="abs.jpg" alt="Abs">
+		  <area shape="rect" coords="17,114,46,252" href="biceps.jpg" alt="Biceps">
+		  <area shape="rect" coords="144,130,194,273" href="biceps.jpg" alt="Biceps">
+		  <area shape="rect" coords="45,259,164,532" href="legs.jpg" alt="Legs">
+		</map>
+		</div>
+
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#goals" data-iconpos="left" data-icon="arrow-l">Back</a></li>
+			<li><a href="#easy" data-iconpos="right" data-icon="arrow-r">Next</a></li>
+		</ul>
+	</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="easy">
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content">
+		<p style="text-align:center; font-size:1.5em">Go easy on: </p>
+		<div style="text-align: center">
+		<img src="img/body.png">
+		</div>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#focus" data-iconpos="left" data-icon="arrow-l">Back</a></li>
+			<li><a href="#challenges" data-iconpos="right" data-icon="arrow-r">Ready!</a></li> <!-- to Challenge List screen, not implemented yet -->
+		</ul>
+	</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+
+<div data-role="page" id="challenges">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>Challenges</h1>
+		<a href="#challenges" data-icon="back" class="ui-btn-left" data-rel="back" data-direction="reverse">Back</a>
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#challenges" data-transition="pop">Challenges</a></li>
+			<li><a href="#nyc" data-transition="pop">Manhattan Half Marathon</a></li>
 		</ul>
 		</div>
 	</div>
 
-	<div data-role="content">
-		<p>Page content goes here.</p>
-		<div><p>Here</p>
-		<ul data-role="listview" data-inset="true">             
-			<li><a href="http://acura.com">Acura</a></li>
-			<li><a href="http://audi.com">Audi</a></li>
-			<li><a href="http://bmw.com">BMW</a></li>
-		</ul>
+	<div data-role="content" class="center">
+		<div  class="ui-body ui-body-a ui-corner-all center" style="width: 45%;">
+			<ul data-role="listview" id="list" style="width: 900%;" data-inset="true">             
+				<li><a href="#nyc">Manhattan Half Marathon</a></li>
+				<li><a href="http://audi.com">Walk the Great Wall</a></li>
+				<li><a href="http://bmw.com">Climb Mount Everest</a></li>
+			</ul>
 		</div>
-		<br />
-		<a href="http://google.com" data-role="button">Google</a>
+			
+		<br/>
+		
 	</div><!-- /content -->
 
 	<div data-role="footer" data-id="footer" data-position="fixed">
@@ -43,29 +328,184 @@
 </div><!-- /page -->
 
 
-<div data-role="page" id="alena">
+<div data-role="page" id="nyc">
 
 	<div data-role="header" data-id="header" data-position="fixed">
-		<h1>My Page</h1>
-		<a href="#home" data-icon="back" class="ui-btn-left" data-rel="back" data-direction="reverse">Back</a>
+		<h1>Manhattan Half Marathon</h1>
+		<a href="#challenges" data-icon="back" class="ui-btn-left" data-rel="back" data-direction="reverse">Back</a>
 		<div data-role="navbar">
 		<ul>
-			<li><a href="#home" data-transition="pop">Home</a></li>
-			<li><a href="#alena" data-transition="pop">Alena</a></li>
+			<li><a href="#challenges" data-transition="pop">Challenges</a></li>
+			<li><a href="#nyc" data-transition="pop">Alena</a></li>
 		</ul>
 		</div>
 	</div>
 
-	<div data-role="content">
-		<p>Page content goes here.</p>
-		<div><p>Here</p>
-		<ul data-role="listview" data-inset="true">             
-			<li>HELLO</li>
-			<li>STILL HELLO</li>
+	<div data-role="content" class="center" style="margin-left: 25%; margin-right: 25%">
+		<p></p>
+		<div><p>This is a challenge that involves running for miles and miles and miles. This workout is a 6 mile run that will take you through scenic Manhattan, along the route of the world famous Manhattan Half Marathon. Start at Central Park, run through Times Square, and cross the finish line at Wall Street. This is a cardio workout that will exercise your legs, arms, and back.  </p>
+	
+		</div>
+		
+		<a href="#progress" data-role="button" data-inline="true">Go Solo</a>
+		<a href="#team" data-role="button" data-inline="true">Add Teammates</a>	
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="footer" data-position="fixed">
+		<h4>Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="team">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>Manhattan Half Marathon</h1>
+		<a href="#nyc" data-icon="back" class="ui-btn-left" data-rel="back" data-direction="reverse">Back</a>
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#challenges" data-transition="pop">Challenges</a></li>
+			<li><a href="#nyc" data-transition="pop">Manhattan Half Marathon</a></li>
 		</ul>
 		</div>
-		<br />
-		<a href="http://google.com" data-role="button">Google</a>
+	</div>
+
+	<div data-role="content" class="center">
+		<p></p>
+		<div><h1>Add Teammates!</h1>
+		</div>
+	
+	<!-- Modal Html-->
+		<div id="modal1" style="display:none;">
+			<p>Thanks for clicking.  That felt good.  <a href="#" rel="modal:close">Close</a> or press ESC</p>
+		</div>
+		
+		 <!-- Link to open the modal -->
+		<p><a href="#modal1" data-role="button" data-inline="true" rel="modal:open">Open Modal</a></p>
+	
+		</br>
+		<a href="#progress" data-role="button" data-inline="true">Get Started!</a>
+		
+	
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="footer" data-position="fixed">
+		<h4>Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="video">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>Manhattan Half Marathon</h1>
+		<a href="#team" data-icon="back" class="ui-btn-left" data-rel="back" data-direction="reverse">Back</a>
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#challenges" data-transition="pop">Challenges</a></li>
+			<li><a href="#nyc" data-transition="pop">Manhattan Half Marathon</a></li>
+		</ul>
+		</div>
+	</div>
+
+	<div data-role="content" class="center">
+		<p></p>
+		<div><p>Check out this instructional video to help you get started, or to pick up useful tips!</p>
+		</div>
+		
+		<iframe width="420" height="315"
+			src="https://www.youtube.com/embed/L53gjP-TtGE">
+		</iframe>
+		</br>
+		<a href="#progress" data-role="button" data-inline="true">Get Started!</a>	
+	
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="footer" data-position="fixed">
+		<h4>Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="progress">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>Manhattan Half Marathon</h1>
+		
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#challenges" data-transition="pop">Challenges</a></li>
+			<li><a href="#nyc" data-transition="pop">Manhattan Half Marathon</a></li>
+		</ul>
+		</div>
+	</div>
+
+	<div data-role="content" class="center">
+		<p></p>
+		<div><h1>Challenge in Progress</h1>
+		<p>20% Complete</p>
+		<p>3.2 miles left</p>
+		</div>
+		
+		<div data-role="content">
+			
+			<img src="img/run.png" style="position:relative; left:80px; width: 3%;">
+			<img src="img/run.png" style="position:relative; left:200px; width: 4%;">
+			<img src="img/run.png" style="position:relative; left:400px; width: 3%;">
+			<img src="img/flag.png" style="position:relative; left:600px; width: 3%;">
+				
+			<img src="img/lineline.png" style="position:relative; width: 55%; top: 1px; left: -85px;">				
+			
+		</div>
+		
+		<div  class="ui-body ui-body-a ui-corner-all center" style="width: 45%;">
+			<p>Jenna just sent you a thumbs up!</p>
+		</div>
+		
+		</br>
+		
+		<div data-role="content" class="center">
+			<a href="#challenges" data-inline="true" class ="ui-btn ui-input-btn ui-shadow custom-btn">I'm done for now!</a>
+			<a href="#complete" class ="ui-btn ui-input-btn ui-shadow custom-btn" data-inline="true">Jump to end</a>
+		</div>
+	
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="footer" data-position="fixed">
+		<h4>Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="complete">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>Manhattan Half Marathon</h1>
+		
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#challenges" data-transition="pop">Challenges</a></li>
+			<li><a href="#nyc" data-transition="pop">Manhattan Half Marathon</a></li>
+		</ul>
+		</div>
+	</div>
+
+	<div data-role="content" class="center">
+		<h1>Challenge Complete!</h1>
+		<img src="img/cup.png" style="position:relative; width: 15%;">
+		
+		
+		<h2>Share your accomplishment!</h2>
+	
+		</br>
+		<a href="http://www.facebook.com" data-role="button" data-inline="true" data-icon="facebook" class="ui-nodisc-icon center" data-iconpos="notext" style="width:7%;"></a>
+		<a href="http://www.twitter.com" data-role="button" data-inline="true" data-icon="twitter" class="ui-nodisc-icon center" data-iconpos="notext" style="width:7%;"></a>
+		
+		</br>
+		</br>
+		<a href="#newsfeed" class ="ui-btn ui-input-btn ui-shadow custom-btn" data-inline="true">Newsfeed</a>
+		<!--<a href="http://www.facebook.com" data-role="button" data-inline="true">Facebook</a>
+		<a href="http://www.twitter.com" data-role="button" data-inline="true">Twitter</a>
+		-->
+	
 	</div><!-- /content -->
 
 	<div data-role="footer" data-id="footer" data-position="fixed">
