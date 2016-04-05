@@ -1,0 +1,1 @@
+alert("reading js file");
