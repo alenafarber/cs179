@@ -3,6 +3,10 @@
 <head>
 	<title>FitFeats</title>
 
+	<meta property="og:title" content="FitFeats" />
+	<meta property="og:description" content="FitFeats is an app designed to motivate you to start working out and keep working out! Designed with women in mind, we're proud of our all-female social network and of our real-world oriented challenges." />
+	<meta property="og:image" content="img/cup.png" />
+
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -17,6 +21,18 @@
 
 </head>
 <body>
+
+
+<!-- the below code is from the facebook share button documentation -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 
 <div data-role="page" id="newsfeed">
 
@@ -499,6 +515,9 @@
 		
 		
 		<h2>Share your accomplishment!</h2>
+
+
+		<div class="fb-share-button" data-href="http://team14.sp16.cs179.org/" data-layout="button"></div>
 		
 		<div id="invite">
 			<a href="http://facebook.com" data-role="button" data-icon="facebook-square" data-iconpos="notext">Facebook</a>
