@@ -16,6 +16,10 @@
   justify-content:space-around;
 }
 
+#longlist li {
+	white-space:normal;
+}
+
 #friends {
 	text-align: center;
 }
@@ -49,8 +53,6 @@
     margin:0 auto;
     margin-left:auto;
     margin-right:auto;
-  
-    text-align:center;
 }
  
 .ui-icon-run {
@@ -99,6 +101,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	height: 7vw;
+	margin-bottom: 15vh;
 }
 
 #progline > img {

@@ -10,18 +10,10 @@
 	<link rel="stylesheet" href="css/custom.css" />
 	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<script src="jquery.modal.js" type="text/javascript"></script>
+	<script src="js/jquery.modal.min.js" type="text/javascript"></script>
+	<script src="js/custom.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="css/jquery.modal.css" type="text/css" />
 
-
-<!--
-		<script src="/cs179/nativeDroid2/vendor/waves/waves.min.js"></script>
-		<script src="/cs179/nativeDroid2/js/nativedroid2.js"></script>
-		<script src="/cs179/nativeDroid2/nd2settings.js"></script>
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="/cs179/nativeDroid2/vendor/waves/waves.min.css" />
-		<link rel="stylesheet" href="/cs179/nativeDroid2/css/nativedroid2.css" />
--->
 
 </head>
 <body>
@@ -33,7 +25,7 @@
 	</div>
 
 	<div data-role="content">
-		<ul data-role="listview" data-inset="true">             
+		<ul data-role="listview" data-inset="true" id="longlist">             
 			<li><img src="img/Alena.jpg">Alena completed the Manhattan Marathon!</li>
 			<li><img src="img/Kavya.jpg">Kavya completed the Mt. Everest Hike!</li>
 			<li><img src="img/Catherine.jpg">Catherine completed the BMW Lift Challenge!</li>
@@ -44,8 +36,8 @@
 		<div data-role="navbar">
 		<ul>
 			<li><a href="#profile" data-icon="female">Profile</a></li>
-			<li><a href="#trophy" data-icon="external-link3">Trophy Case</a></li>
-			<li><a href="#time" data-icon="greencheck" style="color: green;">New Challenge</a></li>
+			<li><a href="#trophy" data-icon="external-link3">Trophies</a></li>
+			<li><a href="#time" data-icon="greencheck" style="color: green; white-space:normal;">New Challenge</a></li>
 			<li><a href="#newsfeed" data-icon="rss" class="ui-btn-active ui-state-persist">Newsfeed</a></li>
 			<li><a href="#friends" data-icon="group">Friends</a></li>
 		</ul>
@@ -62,6 +54,7 @@
 
 	<div data-role="content">
 		<div id="user-info">
+			<h4 style="margin-top:0;margin-bottom:1vh;">Welcome, Emma!</h4>
 			<img src="img/Emma.jpg" width="70px">
 			<p class="instructions">Change Picture</p>
 			<div class="even-space">
@@ -94,7 +87,7 @@
 		<div data-role="navbar">
 		<ul>
 			<li><a href="#profile" data-icon="female" class="ui-btn-active ui-state-persist">Profile</a></li>
-			<li><a href="#trophy" data-icon="external-link3">Trophy Case</a></li>
+			<li><a href="#trophy" data-icon="external-link3">Trophies</a></li>
 			<li><a href="#time" data-icon="greencheck" style="color: green;">New Challenge</a></li>
 			<li><a href="#newsfeed" data-icon="rss">Newsfeed</a></li>
 			<li><a href="#friends" data-icon="group">Friends</a></li>
@@ -133,7 +126,7 @@
 		<div data-role="navbar">
 		<ul>
 			<li><a href="#profile" data-icon="female">Profile</a></li>
-			<li><a href="#trophy" data-icon="external-link3" class="ui-btn-active ui-state-persist">Trophy Case</a></li>
+			<li><a href="#trophy" data-icon="external-link3" class="ui-btn-active ui-state-persist">Trophies</a></li>
 			<li><a href="#time" data-icon="greencheck" style="color: green;">New Challenge</a></li>
 			<li><a href="#newsfeed" data-icon="rss">Newsfeed</a></li>
 			<li><a href="#friends" data-icon="group">Friends</a></li>
@@ -176,7 +169,7 @@
 		<div data-role="navbar">
 		<ul>
 			<li><a href="#profile" data-icon="female">Profile</a></li>
-			<li><a href="#trophy" data-icon="external-link3">Trophy Case</a></li>
+			<li><a href="#trophy" data-icon="external-link3">Trophies</a></li>
 			<li><a href="#time" data-icon="greencheck" style="color: green;">New Challenge</a></li>
 			<li><a href="#newsfeed" data-icon="rss">Newsfeed</a></li>
 			<li><a href="#friends" data-icon="group" class="ui-btn-active ui-state-persist">Friends</a></li>
@@ -469,28 +462,20 @@
 	
 		<div id="progline">
 			<img src="img/run.png" style="left:96%">
-			<img src="img/run.png" id="me" style="left: 48%">
+			<img src="img/run.png" id="me" style="left: 0%">
 			<img src="img/run.png" style="left:0%">
 			<img src="img/flag.png" style="right: -4vw;">
 			<div id="line"><img src="img/lineline.png"></div>	
 		</div>
 		
-		</br>
-		</br>
-		</br>
-		</br>
-		</br>
-		
-		<div class="ui-body ui-body-a ui-corner-all center">
+		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:10vh;">
 			<p>Jenna just sent you a thumbs up!</p>
 		</div>
 	
-		
-		
 		<div>
-			<a href="#complete" class ="ui-btn ui-input-btn ui-shadow" data-inline="true">Jump to end</a>
+			<a id="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Jump to end</a>
 		</div>
-	
+
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-id="navbar" data-position="fixed">
