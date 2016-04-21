@@ -34,6 +34,27 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+<div data-role="page" id="start">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content" class="center">
+		<p><b>Welcome to FitFeats!</b></p>
+		<img src="img/logo.jpg">
+		<p>FitFeats is a women's workout app that lets you tackle awesome real-world inspired challenges without leaving your own neighborhood. Choose your challenge, work out at your own pace, and invite your friends to join you. Ready?</p>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#newsfeed" data-iconpos="right" data-icon="arrow-r">Start!</a></li>
+		</ul>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
 
 <div data-role="page" id="newsfeed">
 
@@ -233,30 +254,64 @@
 
 
 <div data-role="page" id="goals">
+	
+	
 	<div data-role="header" data-id="header" data-position="fixed">
 		<h1>FitFeats</h1>
 	</div>
 
-	<div data-role="content">
+	<div data-role="content" id="check1">
 		<p style="text-align:center; font-size:1.5em">I want to:</p>
+		
 		<div>
 		<ul data-role="listview" data-inset="true">     
-			<label><input type="checkbox" name="checkbox-0"/> Lose weight</label>
-			<label><input type="checkbox" name="checkbox-0"/> Get stronger </label>
-			<label><input type="checkbox" name="checkbox-0"/> Increase endurance </label>        
+			<label><input type="checkbox" id="checkweight" name="checkbox-0"/> Lose weight</label>
+			<label><input type="checkbox" id="checkstrong" name="checkbox-0"/> Get stronger </label>
+			<label><input type="checkbox" id="checkincr" name="checkbox-0"/> Increase endurance </label>        
 		</ul>
 		</div>
 	</div><!-- /content -->
-
-
+	
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 		<ul>
 			<li><a href="#time" data-iconpos="left" data-icon="arrow-l">Back</a></li>
-			<li><a href="#focus" data-iconpos="right" data-icon="arrow-r">Next</a></li>
+			<li><a href="#focus" id="next" data-iconpos="right" data-icon="arrow-r">Next</a></li>
 		</ul>
 	</div>
 	</div><!-- /footer -->
+	
+	<script>
+		function save(obj, key){
+			var savehtml = JSON.stringify(obj);
+			
+			localStorage.setItem(key, savehtml);
+		}
+			
+		
+		$('#next').click(function check(){
+			if ($("#checkstrong").is(":checked")){
+				var obj = {"strong" : "yes"};
+				var key = 'strong';
+				localStorage.clear();
+				save(obj, key);
+				
+			}
+			if ($("#checkweight").is(":checked")){
+				var obj = {"weight" : "yes"};
+				var key = "weight";
+				save(obj, key);
+			
+			} 
+			if ($("#checkincr").is(":checked")){
+				var obj = {"endurace" : "yes"};
+				var key = "endurance";
+				save(obj, key);
+				
+			}
+		});
+	</script>
+	
 </div><!-- /page -->
 
 
@@ -330,15 +385,46 @@
 	<div data-role="header" data-id="header" data-position="fixed">
 		<h1>FitFeats</h1>
 	</div>
+	
+	<div data-role="content" id="list" data-inset='true'>
+		<p>Loading your results...</p>
+	</div><!-- /content -->
+	
+	<script>
+	window.onload = function() {
+	
+		if (localStorage.getItem("strong") != null){
+		document.getElementById("list").innerHTML = "<ul id='thislist' data-role='listview' style='width: 900%;' data-inset='true'><li><a href='#strength'>Lift a BMW</a></li><li><a href='#everest'>Climb Mount Everest</a></li></ul>";
+		var z = document.getElementById("list").innerHTML;
+		$('#thislist').listview();
+		
+		} 
+		
+		if (localStorage.getItem("weight") != null){
+		document.getElementById("list").innerHTML = "<ul id='thislist' data-role='listview' style='width: 900%;' data-inset='true'><li><a href='#everest'>Climb Mount Everest</a></li><li><a href='#nyc'>Manhattan Half Marathon</a></li></ul>";
+		var z = document.getElementById("list").innerHTML;
+		$('#thislist').listview();
+		
+		} 
+		
+		if (localStorage.getItem("endurance") != null){
+		document.getElementById("list").innerHTML = "<ul id='thislist' data-role='listview' style='width: 900%;' data-inset='true'><li><a href='#nyc'>Manhattan Half Marathon</a></li><li><a href='#everest'>Climb Mount Everest</a></li><li><a href='#strength'>Lift a BMW</a></li></ul>";
+		var z = document.getElementById("list").innerHTML;
+		$('#thislist').listview();
+		
+		} 
+	}
+	</script>
 
+	<!-- Old Listview (formats properly)
 	<div data-role="content">
 		<ul data-role="listview" data-inset="true">             
 			<li><a href="#nyc">Manhattan Half Marathon</a></li>
 			<li><a href="#everest">Climb Mount Everest</a></li>
 			<li><a href="#strength">Lift a BMW</a></li>
 		</ul>
-	</div><!-- /content -->
-	
+	</div>
+	-->
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
@@ -358,11 +444,11 @@
 
 	<div data-role="content" class="center">
 		<p></p>
-		<div><p>This is a challenge that involves running for miles and miles and miles. This workout is a 6 mile run that will take you through scenic Manhattan, along the route of the world famous Manhattan Half Marathon. Start at Central Park, run through Times Square, and cross the finish line at Wall Street. This is a cardio workout that will exercise your legs, arms, and back.  </p>
+		<div><p> This workout is a 6 mile run that will take you through scenic Manhattan, along the route of the world famous Manhattan Half Marathon. Start at Central Park, run through Times Square, and cross the finish line at Wall Street. This is a cardio workout that will exercise your legs, arms, and back.  </p>
 	
 		</div>
 		
-		<a href="#progress" data-role="button" data-inline="true">Go Solo</a>
+		<a href="#new" data-role="button" data-inline="true">Go Solo</a>
 		<a href="#team" data-role="button" data-inline="true">Add Teammates</a>	
 	</div><!-- /content -->
 	
@@ -388,7 +474,7 @@
 	
 		</div>
 		
-		<a href="#progstrength" data-role="button" data-inline="true">Go Solo</a>
+		<a href="#newstrength" data-role="button" data-inline="true">Go Solo</a>
 		<a href="#teamstrength" data-role="button" data-inline="true" >Add Teammates</a>	
 	</div><!-- /content -->
 	
@@ -556,12 +642,22 @@
 	<div data-role="content" class="center">
 	
 		<div>
-			<h1>Check out the instructional video here</h1>
-		</div>
-		
+
+		<h3>Proper jogging form:</h3>
 		<iframe width="420" height="315"
-			src="https://www.youtube.com/embed/4m1EFMoRFvY">
+			src="https://www.youtube.com/embed/e7m205ZIxBE">
 		</iframe>
+
+		<h3>Tips for this workout:</h3>
+		<ul>
+			<li><p>Bring water or a sports drink with you and keep hydrated.</p></li>
+			<li><p>Pace yourself; you do not have to complete the entire workout in one session.</p></li>
+			<li><p>Land on the middle of your foot and roll through to your toes to avoid stressing your calves or shins.</p></li></li>
+		</ul>
+
+		<h2>IMPORTANT: If you feel discomfort or pain at any time, stop the workout to avoid injury!</h2>
+
+		</div>
 
 	</div><!--content-->
 	
@@ -586,24 +682,26 @@
 	<div data-role="content" class="center">
 	
 		<div>
-			<h2>This challenge has three parts. Check out instructional videos for all three sections here</h2>
+			<h2>This challenge has three parts. Check out instructional videos for all three sections here:</h2>
 		</div>
 		
-		<h3>How to do a push up</h3>
+		<h3>How to do a push up:</h3>
 		<p> To decrease difficulty, modify by resting on your knees, not your toes. To increase difficulty, rest your feet on a surface a few inches off the ground. <p>	
 		<iframe width="420" height="315"
 			src="https://www.youtube.com/embed/eFOSh8vpd6I">
 		</iframe>
 		
-		<h3>How to do a chair dip</h3> 
-		<p> This exercise can be done with a sturdy chair, stool, step, bench or any other flat, elevated surface that's about 2 feet off the ground <p>
+		<h3>How to do a chair dip:</h3> 
+		<p> This exercise can be done with a sturdy chair, stool, step, bench or any other flat, elevated surface that is about 2 feet off the ground <p>
 		<iframe width="420" height="315"
 			src="https://www.youtube.com/embed/6kALZikXxLc">
 		</iframe>
 		
-		<h3>How to do a bicep curl</h3> 
+		<h3>How to do a bicep curl:</h3> 
 		<p> This exercise can be done using any heavy object you find at home, including water bottles, books, bottles of laundry detergent, etc. <p>
 		<img src="img/bicepcurl.jpg">
+
+		<h2>IMPORTANT: If you feel discomfort or pain at any time, stop the workout to avoid injury!</h2>
 		
 
 	</div><!--content-->
@@ -631,6 +729,7 @@
 			<h1>Challenge in Progress</h1>
 			<p>20% Complete</p>
 			<p>3.2 miles left</p>
+			<p> Tap your friends to send them emojis! </p>
 		</div>
 		
 		<div id="progline"  style="margin-bottom: 15vh;">
@@ -688,6 +787,7 @@
 			<h1>Challenge in Progress</h1>
 			<p>20% Complete</p>
 			<p>Check off the boxes as you complete the exercises. Do 5 repetitions to do the standard workout, and 10 repetitions for an extra challenge.</p>
+			<p> Tap your friends to send them emojis! </p>
 		</div>
 	
 		
@@ -853,16 +953,18 @@
 			<h2>This challenge alternates power-walking with squats. Check out proper form for these two types of exercises below.</h2>
 		</div>
 		
-		<h3>How to power-walk</h3>
+		<h3>How to power-walk:</h3>
 		<iframe width="420" height="315"
 			src="https://www.youtube.com/embed/dgo0ip7gjxg">
 		</iframe>
 		
-		<h3>How to do a squat</h3> 
+		<h3>How to do a squat:</h3> 
 		<p>Make sure to keep your knees over your feet to avoid injury.<p>
 		<iframe width="420" height="315"
 			src="https://www.youtube.com/embed/UXJrBgI2RxA">
 		</iframe>
+
+		<h2>IMPORTANT: If you feel discomfort or pain at any time, stop the workout to avoid injury!</h2>
 		
 	</div><!--content-->
 	
@@ -889,6 +991,7 @@
 			<h1>Challenge in Progress</h1>
 			<p>20% Complete</p>
 			<p>Check off the boxes as you complete the exercises. Do 5 repetitions to do the standard workout, and 10 repetitions for an extra challenge.</p>
+			<p> Tap your friends to send them emojis! </p>
 		</div>
 	
 		<div id="progline">
