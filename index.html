@@ -216,30 +216,64 @@
 
 
 <div data-role="page" id="goals">
+	
+	
 	<div data-role="header" data-id="header" data-position="fixed">
 		<h1>FitFeats</h1>
 	</div>
 
-	<div data-role="content">
+	<div data-role="content" id="check1">
 		<p style="text-align:center; font-size:1.5em">I want to:</p>
+		
 		<div>
 		<ul data-role="listview" data-inset="true">     
-			<label><input type="checkbox" name="checkbox-0"/> Lose weight</label>
-			<label><input type="checkbox" name="checkbox-0"/> Get stronger </label>
-			<label><input type="checkbox" name="checkbox-0"/> Increase endurance </label>        
+			<label><input type="checkbox" id="checkweight" name="checkbox-0"/> Lose weight</label>
+			<label><input type="checkbox" id="checkstrong" name="checkbox-0"/> Get stronger </label>
+			<label><input type="checkbox" id="checkincr" name="checkbox-0"/> Increase endurance </label>        
 		</ul>
 		</div>
 	</div><!-- /content -->
-
-
+	
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 		<ul>
 			<li><a href="#time" data-iconpos="left" data-icon="arrow-l">Back</a></li>
-			<li><a href="#focus" data-iconpos="right" data-icon="arrow-r">Next</a></li>
+			<li><a href="#focus" id="next" data-iconpos="right" data-icon="arrow-r">Next</a></li>
 		</ul>
 	</div>
 	</div><!-- /footer -->
+	
+	<script>
+		function save(obj, key){
+			var savehtml = JSON.stringify(obj);
+			
+			localStorage.setItem(key, savehtml);
+		}
+			
+		
+		$('#next').click(function check(){
+			if ($("#checkstrong").is(":checked")){
+				var obj = {"strong" : "yes"};
+				var key = 'strong';
+				localStorage.clear();
+				save(obj, key);
+				
+			}
+			if ($("#checkweight").is(":checked")){
+				var obj = {"weight" : "yes"};
+				var key = "weight";
+				save(obj, key);
+			
+			} 
+			if ($("#checkincr").is(":checked")){
+				var obj = {"endurace" : "yes"};
+				var key = "endurance";
+				save(obj, key);
+				
+			}
+		});
+	</script>
+	
 </div><!-- /page -->
 
 
@@ -313,7 +347,38 @@
 	<div data-role="header" data-id="header" data-position="fixed">
 		<h1>FitFeats</h1>
 	</div>
+	
+	<div data-role="content" id="list" data-inset='true'>
+		<p>Loading your results...</p>
+	</div><!-- /content -->
+	
+	<script>
+	window.onload = function() {
+	
+		if (localStorage.getItem("strong") != null){
+		document.getElementById("list").innerHTML = "<ul id='thislist' data-role='listview' style='width: 900%;' data-inset='true'><li><a href='#strength'>Lift a BMW</a></li><li><a href='#everest'>Climb Mount Everest</a></li></ul>";
+		var z = document.getElementById("list").innerHTML;
+		$('#thislist').listview();
+		
+		} 
+		
+		if (localStorage.getItem("weight") != null){
+		document.getElementById("list").innerHTML = "<ul id='thislist' data-role='listview' style='width: 900%;' data-inset='true'><li><a href='#everest'>Climb Mount Everest</a></li><li><a href='#nyc'>Manhattan Half Marathon</a></li></ul>";
+		var z = document.getElementById("list").innerHTML;
+		$('#thislist').listview();
+		
+		} 
+		
+		if (localStorage.getItem("endurance") != null){
+		document.getElementById("list").innerHTML = "<ul id='thislist' data-role='listview' style='width: 900%;' data-inset='true'><li><a href='#nyc'>Manhattan Half Marathon</a></li><li><a href='#everest'>Climb Mount Everest</a></li><li><a href='#strength'>Lift a BMW</a></li></ul>";
+		var z = document.getElementById("list").innerHTML;
+		$('#thislist').listview();
+		
+		} 
+	}
+	</script>
 
+	<!-- Old Listview (formats properly)
 	<div data-role="content">
 		<ul data-role="listview" data-inset="true">             
 			<li><a href="#nyc">Manhattan Half Marathon</a></li>
@@ -321,8 +386,8 @@
 			<li><a href="#everest">Climb Mount Everest</a></li>
 			<li><a href="#strength">Lift a BMW</a></li>
 		</ul>
-	</div><!-- /content -->
-	
+	</div>
+	-->
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
@@ -342,11 +407,11 @@
 
 	<div data-role="content" class="center">
 		<p></p>
-		<div><p>This is a challenge that involves running for miles and miles and miles. This workout is a 6 mile run that will take you through scenic Manhattan, along the route of the world famous Manhattan Half Marathon. Start at Central Park, run through Times Square, and cross the finish line at Wall Street. This is a cardio workout that will exercise your legs, arms, and back.  </p>
+		<div><p> This workout is a 6 mile run that will take you through scenic Manhattan, along the route of the world famous Manhattan Half Marathon. Start at Central Park, run through Times Square, and cross the finish line at Wall Street. This is a cardio workout that will exercise your legs, arms, and back.  </p>
 	
 		</div>
 		
-		<a href="#progress" data-role="button" data-inline="true">Go Solo</a>
+		<a href="#new" data-role="button" data-inline="true">Go Solo</a>
 		<a href="#team" data-role="button" data-inline="true">Add Teammates</a>	
 	</div><!-- /content -->
 	
@@ -372,7 +437,7 @@
 	
 		</div>
 		
-		<a href="#progstrength" data-role="button" data-inline="true">Go Solo</a>
+		<a href="#newstrength" data-role="button" data-inline="true">Go Solo</a>
 		<a href="#teamstrength" data-role="button" data-inline="true" >Add Teammates</a>	
 	</div><!-- /content -->
 	
@@ -528,11 +593,11 @@
 	<div data-role="content" class="center">
 	
 		<div>
-			<h1>Check out the instructional video here</h1>
+			<h1>Check out some tips on how to run with this video</h1>
 		</div>
 		
 		<iframe width="420" height="315"
-			src="https://www.youtube.com/embed/4m1EFMoRFvY">
+			src="https://www.youtube.com/embed/hdpSTCzEJB8">
 		</iframe>
 
 	</div><!--content-->
@@ -603,6 +668,7 @@
 			<h1>Challenge in Progress</h1>
 			<p>20% Complete</p>
 			<p>3.2 miles left</p>
+			<p> Tap your friends to send them emojis! </p>
 		</div>
 		
 		<div id="progline">
@@ -660,6 +726,7 @@
 			<h1>Challenge in Progress</h1>
 			<p>20% Complete</p>
 			<p>Check off the boxes as you complete the exercises. Do 5 repetitions to do the standard workout, and 10 repetitions for an extra challenge.</p>
+			<p> Tap your friends to send them emojis! </p>
 		</div>
 	
 		
@@ -855,6 +922,7 @@
 			<h1>Challenge in Progress</h1>
 			<p>20% Complete</p>
 			<p>Check off the boxes as you complete the exercises. Do 5 repetitions to do the standard workout, and 10 repetitions for an extra challenge.</p>
+			<p> Tap your friends to send them emojis! </p>
 		</div>
 	
 		<div id="progline">
