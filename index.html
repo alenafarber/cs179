@@ -105,7 +105,7 @@
 		<ul>
 			<li><a href="#profile" data-icon="female" class="ui-btn-active ui-state-persist">Profile</a></li>
 			<li><a href="#trophy" data-icon="external-link3">Trophies</a></li>
-			<li><a href="#time" data-icon="greencheck" style="color: green;">New Challenge</a></li>
+			<li><a href="#time" data-icon="greencheck" style="color: green; white-space:normal;">New Challenge</a></li>
 			<li><a href="#newsfeed" data-icon="rss">Newsfeed</a></li>
 			<li><a href="#friends" data-icon="group">Friends</a></li>
 		</ul>
@@ -144,7 +144,7 @@
 		<ul>
 			<li><a href="#profile" data-icon="female">Profile</a></li>
 			<li><a href="#trophy" data-icon="external-link3" class="ui-btn-active ui-state-persist">Trophies</a></li>
-			<li><a href="#time" data-icon="greencheck" style="color: green;">New Challenge</a></li>
+			<li><a href="#time" data-icon="greencheck" style="color: green; white-space:normal;">New Challenge</a></li>
 			<li><a href="#newsfeed" data-icon="rss">Newsfeed</a></li>
 			<li><a href="#friends" data-icon="group">Friends</a></li>
 		</ul>
@@ -187,7 +187,7 @@
 		<ul>
 			<li><a href="#profile" data-icon="female">Profile</a></li>
 			<li><a href="#trophy" data-icon="external-link3">Trophies</a></li>
-			<li><a href="#time" data-icon="greencheck" style="color: green;">New Challenge</a></li>
+			<li><a href="#time" data-icon="greencheck" style="color: green; white-space:normal;">New Challenge</a></li>
 			<li><a href="#newsfeed" data-icon="rss">Newsfeed</a></li>
 			<li><a href="#friends" data-icon="group" class="ui-btn-active ui-state-persist">Friends</a></li>
 		</ul>
@@ -333,7 +333,6 @@
 	<div data-role="content">
 		<ul data-role="listview" data-inset="true">             
 			<li><a href="#nyc">Manhattan Half Marathon</a></li>
-			<li><a href="#nyc">Walk the Great Wall</a></li>
 			<li><a href="#everest">Climb Mount Everest</a></li>
 			<li><a href="#strength">Lift a BMW</a></li>
 		</ul>
@@ -416,18 +415,24 @@
 		</div>
 
 			<div id="friend-list">
+				<a href="javascript:alert('Alena added to team!');">
 				<div class="friend">
 					<img src="img/Alena.jpg">
 					<h4>Alena</h4>
 				</div>
+				</a>
+				<a href="javascript:alert('Kavya added to team!');">
 				<div class="friend">
 					<img src="img/Kavya.jpg">
 					<h4>Kavya</h4>
 				</div>
+				</a>
+				<a href="javascript:alert('Catherine added to team!');">
 				<div class="friend">
 					<img src="img/Catherine.jpg">
 					<h4>Catherine</h4>
 				</div>
+				</a>
 			</div>
 	</div><!--content-->
 	
@@ -456,18 +461,24 @@
 		</div>
 
 			<div id="friend-list">
+				<a href="javascript:alert('Alena added to team!');">
 				<div class="friend">
 					<img src="img/Alena.jpg">
 					<h4>Alena</h4>
 				</div>
+				</a>
+				<a href="javascript:alert('Kavya added to team!');">
 				<div class="friend">
 					<img src="img/Kavya.jpg">
 					<h4>Kavya</h4>
 				</div>
+				</a>
+				<a href="javascript:alert('Catherine added to team!');">
 				<div class="friend">
 					<img src="img/Catherine.jpg">
 					<h4>Catherine</h4>
 				</div>
+				</a>
 			</div>
 	</div><!--content-->
 	
@@ -500,7 +511,7 @@
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#video" data-iconpos="left" data-icon="arrow-l">Go to Demo</a></li>
+				<li><a href="#video" data-iconpos="left" data-icon="video-camera">Go to Demo</a></li>
 				<li><a href="#progress" data-iconpos="right" data-icon="arrow-r">Start Challenge!</a></li>
 			</ul>
 		</div>
@@ -526,7 +537,7 @@
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#videostrength" data-iconpos="left" data-icon="arrow-l">Go to Demo</a></li>
+				<li><a href="#videostrength" data-iconpos="left" data-icon="video-camera">Go to Demo</a></li>
 				<li><a href="#progstrength" data-iconpos="right" data-icon="arrow-r">Start Challenge!</a></li>
 			</ul>
 		</div>
@@ -621,14 +632,14 @@
 			<p>3.2 miles left</p>
 		</div>
 		
-		<div id="progline">
+		<div id="progline"  style="margin-bottom: 15vh;">
 			<a href="#popupBasic" data-rel="popup">
 				<div id="progline">
 					<img src="img/run.png" style="left:96%">
 					<img src="img/run.png" style="left:0%">
 				</div>
 			</a>
-			<img src="img/run.png" id="me" style="left: 0%">
+			<img src="img/run.png" class="me" style="left: 0%">
 			
 			<img src="img/flag.png" style="right: -4vw;">
 		
@@ -651,7 +662,7 @@
 		</div>
 	
 		<div>
-			<a id="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Jump to end</a>
+			<a class="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Jump to end</a>
 		</div>
 
 	</div><!-- /content -->
@@ -680,7 +691,7 @@
 	
 		
 		
-		<div id="progline">
+		<div id="progline" style="margin-bottom: 2vh;">
 			<a href="#popupBasic1" data-rel="popup">
 				<div id="progline">
 					<img src="img/gym.png" style="left:96%">
@@ -688,7 +699,7 @@
 				</div>
 			</a>
 			
-			<img src="img/gym.png" id="me" style="left: 0%; width: 6vw;">
+			<img src="img/gym.png" class="me" style="left: 0%; width: 6vw;">
 			<img src="img/silhouette.png" style="right: -4vw; width: 8vw;">
 			<div id="line">
 				<img src="img/lineline.png">
@@ -713,12 +724,12 @@
 		</div>
 		
 
-		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:10vh;">
+		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:2vh;">
 			<p>Jenna just sent you a thumbs up!</p>
 		</div>
 	
 		<div>
-			<a id="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Jump to end</a>
+			<a class="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Jump to end</a>
 		</div>
 
 	</div><!-- /content -->
@@ -771,18 +782,24 @@
 		</div>
 
 			<div id="friend-list">
+				<a href="javascript:alert('Alena added to team!');">
 				<div class="friend">
 					<img src="img/Alena.jpg">
 					<h4>Alena</h4>
 				</div>
+				</a>
+				<a href="javascript:alert('Kavya added to team!');">
 				<div class="friend">
 					<img src="img/Kavya.jpg">
 					<h4>Kavya</h4>
 				</div>
+				</a>
+				<a href="javascript:alert('Catherine added to team!');">
 				<div class="friend">
 					<img src="img/Catherine.jpg">
 					<h4>Catherine</h4>
 				</div>
+				</a>
 			</div>
 	</div><!--content-->
 	
@@ -815,7 +832,7 @@
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#videoeverest" data-iconpos="left" data-icon="arrow-l">Go to Demo</a></li>
+				<li><a href="#videoeverest" data-iconpos="left" data-icon="video-camera">Go to Demo</a></li>
 				<li><a href="#progeverest" data-iconpos="right" data-icon="arrow-r">Start Challenge!</a></li>
 			</ul>
 		</div>
@@ -880,7 +897,7 @@
 					<img src="img/hikingman.png" style="left:0%">
 				</div>
 			</a>
-			<img src="img/hikingman.png" id="me" style="left: 0%">
+			<img src="img/hikingman.png" class="me" style="left: 0%">
 			
 			<img src="img/mountain.png" style="right: -4vw;">
 		
@@ -904,12 +921,12 @@
 			</ul>
 		</div>
 		
-		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:10vh;">
+		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:2vh;">
 			<p>Jenna just sent you a thumbs up!</p>
 		</div>
 	
 		<div>
-			<a id="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Jump to end</a>
+			<a class="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Jump to end</a>
 		</div>
 
 	</div><!-- /content -->
@@ -930,13 +947,6 @@
 		<h1>FitFeats</h1>
 	</div>
 
-
-<div data-role="page" id="complete">
-
-	<div data-role="header" data-id="header" data-position="fixed">
-		<h1>FitFeats</h1>
-	</div>
-
 	<div data-role="content" class="center">
 		<h1>Challenge Complete!</h1>
 		<img src="img/cup.png" style="position:relative; width: 15%;">
@@ -948,7 +958,6 @@
 		<div class="fb-share-button" data-href="http://team14.sp16.cs179.org/" data-layout="button"></div>
 		
 		<div id="invite">
-			<a href="http://facebook.com" data-role="button" data-icon="facebook-square" data-iconpos="notext">Facebook</a>
 			<a href="http://contacts.google.com" data-role="button" data-icon="phone" data-iconpos="notext">Contacts</a>
 			<a href="http://gmail.com" data-role="button" data-icon="envelope" data-iconpos="notext">Email</a>
 		</div>
@@ -961,10 +970,7 @@
 			</ul>
 		</div>
 	</div>
-	
-</div><!-- /content -->
-	
-	<!-- /page -->
+</div>
 
 </body>
 </html>

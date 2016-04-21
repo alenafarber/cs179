@@ -1,17 +1,25 @@
 $(function() {
-	moveButton = $('#motion'); 
-	moveButton[0].onclick=function() {move()};
+	moveButton = $('.motion'); 
+
+	for (var i = 0; i < moveButton.length; i++) {
+		var button = moveButton[i];
+		button.onclick = function() {move()};
+	}
 
 
 	function move() {
 
-		var me = $('#me');
-		var elem = me[0];
+		var me = $('.me');
 		var left = 0;
 
 		function frame() {
 			left++  // update parameters 
-			elem.style.left = left + '%'; // show frame
+			
+			for (var i = 0; i < me.length; i++) {
+				var elem = me[i];
+				elem.style.left = left + '%'; // show frame
+			}
+
 			if (left == 96)  {// check finish condition
 				clearInterval(id);
 				window.location.href = "#complete";
