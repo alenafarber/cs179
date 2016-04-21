@@ -101,7 +101,6 @@
 	margin-left: auto;
 	margin-right: auto;
 	height: 7vw;
-	margin-bottom: 15vh;
 }
 
 #progline > img {
@@ -110,7 +109,7 @@
 	width: 5vw;
 }
 
-#progline #me {
+#progline .me {
 	width: 7vw;
 }
 

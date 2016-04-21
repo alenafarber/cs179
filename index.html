@@ -3,6 +3,10 @@
 <head>
 	<title>FitFeats</title>
 
+	<meta property="og:title" content="FitFeats" />
+	<meta property="og:description" content="FitFeats is an app designed to motivate you to start working out and keep working out! Designed with women in mind, we're proud of our all-female social network and of our real-world oriented challenges." />
+	<meta property="og:image" content="img/cup.png" />
+
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -17,6 +21,39 @@
 
 </head>
 <body>
+
+
+<!-- the below code is from the facebook share button documentation -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div data-role="page" id="start">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content" class="center">
+		<p><b>Welcome to FitFeats!</b></p>
+		<img src="img/logo.jpg">
+		<p>FitFeats is a women's workout app that lets you tackle awesome real-world inspired challenges without leaving your own neighborhood. Choose your challenge, work out at your own pace, and invite your friends to join you. Ready?</p>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#newsfeed" data-iconpos="right" data-icon="arrow-r">Start!</a></li>
+		</ul>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
 
 <div data-role="page" id="newsfeed">
 
@@ -89,7 +126,7 @@
 		<ul>
 			<li><a href="#profile" data-icon="female" class="ui-btn-active ui-state-persist">Profile</a></li>
 			<li><a href="#trophy" data-icon="external-link3">Trophies</a></li>
-			<li><a href="#time" data-icon="greencheck" style="color: green;">New Challenge</a></li>
+			<li><a href="#time" data-icon="greencheck" style="color: green; white-space:normal;">New Challenge</a></li>
 			<li><a href="#newsfeed" data-icon="rss">Newsfeed</a></li>
 			<li><a href="#friends" data-icon="group">Friends</a></li>
 		</ul>
@@ -128,7 +165,7 @@
 		<ul>
 			<li><a href="#profile" data-icon="female">Profile</a></li>
 			<li><a href="#trophy" data-icon="external-link3" class="ui-btn-active ui-state-persist">Trophies</a></li>
-			<li><a href="#time" data-icon="greencheck" style="color: green;">New Challenge</a></li>
+			<li><a href="#time" data-icon="greencheck" style="color: green; white-space:normal;">New Challenge</a></li>
 			<li><a href="#newsfeed" data-icon="rss">Newsfeed</a></li>
 			<li><a href="#friends" data-icon="group">Friends</a></li>
 		</ul>
@@ -171,7 +208,7 @@
 		<ul>
 			<li><a href="#profile" data-icon="female">Profile</a></li>
 			<li><a href="#trophy" data-icon="external-link3">Trophies</a></li>
-			<li><a href="#time" data-icon="greencheck" style="color: green;">New Challenge</a></li>
+			<li><a href="#time" data-icon="greencheck" style="color: green; white-space:normal;">New Challenge</a></li>
 			<li><a href="#newsfeed" data-icon="rss">Newsfeed</a></li>
 			<li><a href="#friends" data-icon="group" class="ui-btn-active ui-state-persist">Friends</a></li>
 		</ul>
@@ -382,7 +419,6 @@
 	<div data-role="content">
 		<ul data-role="listview" data-inset="true">             
 			<li><a href="#nyc">Manhattan Half Marathon</a></li>
-			<li><a href="#nyc">Walk the Great Wall</a></li>
 			<li><a href="#everest">Climb Mount Everest</a></li>
 			<li><a href="#strength">Lift a BMW</a></li>
 		</ul>
@@ -465,18 +501,24 @@
 		</div>
 
 			<div id="friend-list">
+				<a href="javascript:alert('Alena added to team!');">
 				<div class="friend">
 					<img src="img/Alena.jpg">
 					<h4>Alena</h4>
 				</div>
+				</a>
+				<a href="javascript:alert('Kavya added to team!');">
 				<div class="friend">
 					<img src="img/Kavya.jpg">
 					<h4>Kavya</h4>
 				</div>
+				</a>
+				<a href="javascript:alert('Catherine added to team!');">
 				<div class="friend">
 					<img src="img/Catherine.jpg">
 					<h4>Catherine</h4>
 				</div>
+				</a>
 			</div>
 	</div><!--content-->
 	
@@ -505,18 +547,24 @@
 		</div>
 
 			<div id="friend-list">
+				<a href="javascript:alert('Alena added to team!');">
 				<div class="friend">
 					<img src="img/Alena.jpg">
 					<h4>Alena</h4>
 				</div>
+				</a>
+				<a href="javascript:alert('Kavya added to team!');">
 				<div class="friend">
 					<img src="img/Kavya.jpg">
 					<h4>Kavya</h4>
 				</div>
+				</a>
+				<a href="javascript:alert('Catherine added to team!');">
 				<div class="friend">
 					<img src="img/Catherine.jpg">
 					<h4>Catherine</h4>
 				</div>
+				</a>
 			</div>
 	</div><!--content-->
 	
@@ -549,7 +597,7 @@
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#video" data-iconpos="left" data-icon="arrow-l">Go to Demo</a></li>
+				<li><a href="#video" data-iconpos="left" data-icon="video-camera">Go to Demo</a></li>
 				<li><a href="#progress" data-iconpos="right" data-icon="arrow-r">Start Challenge!</a></li>
 			</ul>
 		</div>
@@ -575,7 +623,7 @@
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#videostrength" data-iconpos="left" data-icon="arrow-l">Go to Demo</a></li>
+				<li><a href="#videostrength" data-iconpos="left" data-icon="video-camera">Go to Demo</a></li>
 				<li><a href="#progstrength" data-iconpos="right" data-icon="arrow-r">Start Challenge!</a></li>
 			</ul>
 		</div>
@@ -593,12 +641,22 @@
 	<div data-role="content" class="center">
 	
 		<div>
-			<h1>Check out some tips on how to run with this video</h1>
-		</div>
-		
+
+		<h3>Proper jogging form:</h3>
 		<iframe width="420" height="315"
-			src="https://www.youtube.com/embed/hdpSTCzEJB8">
+			src="https://www.youtube.com/embed/e7m205ZIxBE">
 		</iframe>
+
+		<h3>Tips for this workout:</h3>
+		<ul>
+			<li><p>Bring water or a sports drink with you and keep hydrated.</p></li>
+			<li><p>Pace yourself; you do not have to complete the entire workout in one session.</p></li>
+			<li><p>Land on the middle of your foot and roll through to your toes to avoid stressing your calves or shins.</p></li></li>
+		</ul>
+
+		<h2>IMPORTANT: If you feel discomfort or pain at any time, stop the workout to avoid injury!</h2>
+
+		</div>
 
 	</div><!--content-->
 	
@@ -623,24 +681,26 @@
 	<div data-role="content" class="center">
 	
 		<div>
-			<h2>This challenge has three parts. Check out instructional videos for all three sections here</h2>
+			<h2>This challenge has three parts. Check out instructional videos for all three sections here:</h2>
 		</div>
 		
-		<h3>How to do a push up</h3>
+		<h3>How to do a push up:</h3>
 		<p> To decrease difficulty, modify by resting on your knees, not your toes. To increase difficulty, rest your feet on a surface a few inches off the ground. <p>	
 		<iframe width="420" height="315"
 			src="https://www.youtube.com/embed/eFOSh8vpd6I">
 		</iframe>
 		
-		<h3>How to do a chair dip</h3> 
-		<p> This exercise can be done with a sturdy chair, stool, step, bench or any other flat, elevated surface that's about 2 feet off the ground <p>
+		<h3>How to do a chair dip:</h3> 
+		<p> This exercise can be done with a sturdy chair, stool, step, bench or any other flat, elevated surface that is about 2 feet off the ground <p>
 		<iframe width="420" height="315"
 			src="https://www.youtube.com/embed/6kALZikXxLc">
 		</iframe>
 		
-		<h3>How to do a bicep curl</h3> 
+		<h3>How to do a bicep curl:</h3> 
 		<p> This exercise can be done using any heavy object you find at home, including water bottles, books, bottles of laundry detergent, etc. <p>
 		<img src="img/bicepcurl.jpg">
+
+		<h2>IMPORTANT: If you feel discomfort or pain at any time, stop the workout to avoid injury!</h2>
 		
 
 	</div><!--content-->
@@ -671,14 +731,14 @@
 			<p> Tap your friends to send them emojis! </p>
 		</div>
 		
-		<div id="progline">
+		<div id="progline"  style="margin-bottom: 15vh;">
 			<a href="#popupBasic" data-rel="popup">
 				<div id="progline">
 					<img src="img/run.png" style="left:96%">
 					<img src="img/run.png" style="left:0%">
 				</div>
 			</a>
-			<img src="img/run.png" id="me" style="left: 0%">
+			<img src="img/run.png" class="me" style="left: 0%">
 			
 			<img src="img/flag.png" style="right: -4vw;">
 		
@@ -701,7 +761,7 @@
 		</div>
 	
 		<div>
-			<a id="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Jump to end</a>
+			<a class="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Simulate Workout Progress</a>
 		</div>
 
 	</div><!-- /content -->
@@ -731,7 +791,7 @@
 	
 		
 		
-		<div id="progline">
+		<div id="progline" style="margin-bottom: 2vh;">
 			<a href="#popupBasic1" data-rel="popup">
 				<div id="progline">
 					<img src="img/gym.png" style="left:96%">
@@ -739,7 +799,7 @@
 				</div>
 			</a>
 			
-			<img src="img/gym.png" id="me" style="left: 0%; width: 6vw;">
+			<img src="img/gym.png" class="me" style="left: 0%; width: 6vw;">
 			<img src="img/silhouette.png" style="right: -4vw; width: 8vw;">
 			<div id="line">
 				<img src="img/lineline.png">
@@ -764,12 +824,12 @@
 		</div>
 		
 
-		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:10vh;">
+		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:2vh;">
 			<p>Jenna just sent you a thumbs up!</p>
 		</div>
 	
 		<div>
-			<a id="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Jump to end</a>
+			<a class="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Simulate Workout Progress</a>
 		</div>
 
 	</div><!-- /content -->
@@ -822,18 +882,24 @@
 		</div>
 
 			<div id="friend-list">
+				<a href="javascript:alert('Alena added to team!');">
 				<div class="friend">
 					<img src="img/Alena.jpg">
 					<h4>Alena</h4>
 				</div>
+				</a>
+				<a href="javascript:alert('Kavya added to team!');">
 				<div class="friend">
 					<img src="img/Kavya.jpg">
 					<h4>Kavya</h4>
 				</div>
+				</a>
+				<a href="javascript:alert('Catherine added to team!');">
 				<div class="friend">
 					<img src="img/Catherine.jpg">
 					<h4>Catherine</h4>
 				</div>
+				</a>
 			</div>
 	</div><!--content-->
 	
@@ -866,7 +932,7 @@
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#videoeverest" data-iconpos="left" data-icon="arrow-l">Go to Demo</a></li>
+				<li><a href="#videoeverest" data-iconpos="left" data-icon="video-camera">Go to Demo</a></li>
 				<li><a href="#progeverest" data-iconpos="right" data-icon="arrow-r">Start Challenge!</a></li>
 			</ul>
 		</div>
@@ -886,16 +952,18 @@
 			<h2>This challenge alternates power-walking with squats. Check out proper form for these two types of exercises below.</h2>
 		</div>
 		
-		<h3>How to power-walk</h3>
+		<h3>How to power-walk:</h3>
 		<iframe width="420" height="315"
 			src="https://www.youtube.com/embed/dgo0ip7gjxg">
 		</iframe>
 		
-		<h3>How to do a squat</h3> 
+		<h3>How to do a squat:</h3> 
 		<p>Make sure to keep your knees over your feet to avoid injury.<p>
 		<iframe width="420" height="315"
 			src="https://www.youtube.com/embed/UXJrBgI2RxA">
 		</iframe>
+
+		<h2>IMPORTANT: If you feel discomfort or pain at any time, stop the workout to avoid injury!</h2>
 		
 	</div><!--content-->
 	
@@ -932,7 +1000,7 @@
 					<img src="img/hikingman.png" style="left:0%">
 				</div>
 			</a>
-			<img src="img/hikingman.png" id="me" style="left: 0%">
+			<img src="img/hikingman.png" class="me" style="left: 0%">
 			
 			<img src="img/mountain.png" style="right: -4vw;">
 		
@@ -956,12 +1024,12 @@
 			</ul>
 		</div>
 		
-		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:10vh;">
+		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:2vh;">
 			<p>Jenna just sent you a thumbs up!</p>
 		</div>
 	
 		<div>
-			<a id="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Jump to end</a>
+			<a class="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Simulate Workout Progress</a>
 		</div>
 
 	</div><!-- /content -->
@@ -982,22 +1050,17 @@
 		<h1>FitFeats</h1>
 	</div>
 
-
-<div data-role="page" id="complete">
-
-	<div data-role="header" data-id="header" data-position="fixed">
-		<h1>FitFeats</h1>
-	</div>
-
 	<div data-role="content" class="center">
 		<h1>Challenge Complete!</h1>
 		<img src="img/cup.png" style="position:relative; width: 15%;">
 		
 		
 		<h2>Share your accomplishment!</h2>
+
+
+		<div class="fb-share-button" data-href="http://team14.sp16.cs179.org/" data-layout="button"></div>
 		
 		<div id="invite">
-			<a href="http://facebook.com" data-role="button" data-icon="facebook-square" data-iconpos="notext">Facebook</a>
 			<a href="http://contacts.google.com" data-role="button" data-icon="phone" data-iconpos="notext">Contacts</a>
 			<a href="http://gmail.com" data-role="button" data-icon="envelope" data-iconpos="notext">Email</a>
 		</div>
@@ -1010,10 +1073,7 @@
 			</ul>
 		</div>
 	</div>
-	
-</div><!-- /content -->
-	
-	<!-- /page -->
+</div>
 
 </body>
 </html>
