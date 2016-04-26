@@ -44,15 +44,52 @@
 		<p><b>Welcome to FitFeats!</b></p>
 		<img src="img/logo.jpg">
 		<p>FitFeats is a women's workout app that lets you tackle awesome real-world inspired challenges without leaving your own neighborhood. Choose your challenge, work out at your own pace, and invite your friends to join you. Ready?</p>
+		<a href="#login" data-role="button" data-inline="true">Start!</a>
 	</div><!-- /content -->
 
-	<div data-role="footer" data-id="navbar" data-position="fixed">
-		<div data-role="navbar">
-		<ul>
-			<li><a href="#newsfeed" data-iconpos="right" data-icon="arrow-r">Start!</a></li>
-		</ul>
-		</div>
-	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+<div data-role="page" id="login">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content" class="center">
+			<form name="login">
+			  Email:
+			  <input type="email" name="email" placeholder="yourname@email.com">
+			  Password:
+			  <input type="password" name="password" placeholder="password">
+			</form>
+			<a href="#newsfeed" data-role="button" data-inline="true">Log in</a>
+			<br>or<br>
+			<a href="#signup" data-role="button" data-inline="true">Sign Up</a>
+	</div><!-- /content -->
+</div><!-- /page -->
+
+<div data-role="page" id="signup">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content" class="center">
+			<form name="signup">
+			  First name:
+			  <input type="text" name="firstname" placeholder="Emma">
+			  Last name:
+			  <input type="text" name="lastname" placeholder="Watson">
+			  Email:
+			  <input type="email" name="email" placeholder="yourname@email.com">
+			  Password:
+			  <input type="password" name="password" placeholder="password">
+			  Confirm Password:<br>
+			  <input type="password" name="password" placeholder="password">
+			</form>
+			<a href="#newsfeed" data-role="button" data-inline="true">Create Account</a>
+	</div><!-- /content -->
 </div><!-- /page -->
 
 
