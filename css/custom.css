@@ -123,7 +123,24 @@
 	max-height:100%;
 }
 
+.ui-icon-smiley {
+  background: url("png_icons/smileydark128.png") 50% 50% no-repeat;
+  background-size: 18px 18px;
 
+ 
+}
+
+.ui-icon-glasses {
+  background: url("png_icons/glassesdark.png") 50% 50% no-repeat;
+  background-size: 18px 18px;
+ 
+}
+
+.ui-icon-happy {
+  background: url("png_icons/happy.png") 50% 50% no-repeat;
+  background-size: 18px 18px;
+ 
+}
 
 
 /* custom icons */

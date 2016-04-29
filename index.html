@@ -775,6 +775,19 @@
 	
 </div><!-- /page -->
 
+
+<script>
+	function catherine(){
+		document.getElementById("send").innerHTML = "<p>Send <strong>Catherine</strong> a sticker!</p>";
+	}
+
+	function alena(){
+		document.getElementById("send").innerHTML = "<p>Send <strong>Alena</strong> a sticker!</p>";
+	}
+</script>
+
+
+
 <div data-role="page" id="progress">
 
 	<div data-role="header" data-id="header" data-position="fixed">
@@ -790,32 +803,36 @@
 		</div>
 		
 		<div id="progline"  style="margin-bottom: 15vh;">
-			<a href="#popupBasic" data-rel="popup">
+			<a href="#popupBasic1" data-rel="popup" >
 				<div id="progline">
-					<img src="img/run.png" style="left:96%">
-					<img src="img/run.png" style="left:0%">
+					<img src="img/run.png" onclick="catherine();" style="left:96%">
+					<div id="progline"  style="margin-bottom: 15vh;">
+					<img src="img/run.png" onclick="alena();" style="left:0%">
+					</div>
 				</div>
 			</a>
-			<img src="img/run.png" class="me" style="left: 0%">
 			
+			<img src="img/run.png" class="me" style="left: 0%">
 			<img src="img/flag.png" style="right: -4vw;">
-		
 			<div id="line"><img src="img/lineline.png"></div>	
 			
 		</div>
-	
+		<div data-role="popup" id="popupBasic2" class="ui-content" data-type="horizontal">
+		</div>
 		
-		<div data-role="popup" id="popupBasic" class="ui-content">
-			
-			<img src="img/thumb.png" style="width: 3vw; PADDING-RIGHT: 2vw;">
-			<img src="img/favorite.png" style="width: 3vw; PADDING-RIGHT: 2vw;">
-			<img src="img/emoticon.png" style="width: 3vw; PADDING-RIGHT: 2vw;">
-			<img src="img/smiley.png" style="width: 3vw; PADDING-RIGHT: 2vw;">
-			
+		<div data-role="popup" id="popupBasic1" class="ui-content" data-type="horizontal">
+			<p id="send">Send <strong>Catherine</strong> a sticker!</p>
+			<div  data-type="horizontal" style="display: inline-block;" id="invite">
+				<a href="#progress" data-role="button" data-icon="heart" data-iconpos="notext"></a>
+				<a href="#progress" data-role="button" data-icon="glasses" data-iconpos="notext"></a>
+				<a href="#progress" data-role="button" data-icon="thumbs-up" data-iconpos="notext"></a>
+				<a href="#progress" data-role="button" data-icon="happy" data-iconpos="notext"></a>
+				<a href="#progress" data-role="button" data-icon="smiley" data-iconpos="notext"></a>
+			</div>
 		</div>
 		
 		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:10vh;">
-			<p>Jenna just sent you a thumbs up!</p>
+			<p>Catherine just sent you a thumbs up!</p>
 		</div>
 	
 		<div>
