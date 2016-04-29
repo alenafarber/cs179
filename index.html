@@ -415,19 +415,6 @@
 	</div><!-- /footer -->
 </div><!-- /page -->
 
-
-
-
-<div data-role="page" id="challenges">
-
-	<div data-role="header" data-id="header" data-position="fixed">
-		<h1>FitFeats</h1>
-	</div>
-	
-	<div data-role="content" id="list" data-inset='true'>
-		<p>Loading your results...</p>
-	</div><!-- /content -->
-	
 	<script>
 	function results() {
 		var counter = 0;
@@ -466,6 +453,23 @@
 		} 
 	}
 	</script>
+
+
+
+
+<div data-role="page" id="challenges">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+	
+	<div data-role="content" id="list" data-inset='true'>
+		<p>Loading your results...</p>
+		<script>
+		results();
+		</script>
+	</div><!-- /content -->
+	
 
 	<!-- Old Listview (formats properly)
 	<div data-role="content">
