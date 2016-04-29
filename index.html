@@ -331,7 +331,7 @@
 			if ($("#checkstrong").is(":checked")){
 				var obj = {"strong" : "yes"};
 				var key = 'strong';
-				localStorage.clear();
+				//localStorage.clear();
 				save(obj, key);
 				
 			}
@@ -409,7 +409,7 @@
 		<div data-role="navbar">
 		<ul>
 			<li><a href="#focus" data-iconpos="left" data-icon="arrow-l">Back</a></li>
-			<li><a href="#challenges" data-iconpos="right" data-icon="arrow-r">Ready!</a></li>
+			<li><a href="#challenges" data-iconpos="right" data-icon="arrow-r" onclick="results()">Ready!</a></li>
 		</ul>
 	</div>
 	</div><!-- /footer -->
@@ -429,7 +429,20 @@
 	</div><!-- /content -->
 	
 	<script>
-	window.onload = function() {
+	function results() {
+		var counter = 0;
+		function reload(){
+			for(counter = 0; counter < 2; counter++){
+				if (counter == 0){
+				//window.location.reload();
+				}
+				else{
+				break;
+				}
+			}
+		}
+		
+		reload();
 		
 		if (localStorage.getItem("strong") != null){
 		document.getElementById("list").innerHTML = "<ul id='thislist' data-role='listview' style='width: 900%;' data-inset='true'><li><a href='#strength'>Lift a BMW</a></li><li><a href='#everest'>Climb Mount Everest</a></li></ul>";
