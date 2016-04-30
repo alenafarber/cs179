@@ -906,13 +906,13 @@
 		<div id="progline"  style="margin-bottom: 15vh;">
 			<a href="#popupBasic1" data-rel="popup" data-position-to="window">
 				<div id="progline">
-
-					<img src="img/run C.png" onclick="catherine();" style="left:96%">
-					<img src="img/run A.png" onclick="alena();" style="left:0%">
+					<img src="img/run.png" onclick="catherine();" style="left:96%">
+					<img src="img/run.png" onclick="alena();" style="left:0%">
 					
 				</div>
 			</a>
-			<img src="img/run me.png" class="me" style="left: 0%">
+			
+			<img src="img/run.png" class="me" style="left: 0%">
 			<img src="img/flag.png" style="right: -4vw;">
 			<div id="line"><img src="img/lineline.png"></div>	
 			
@@ -976,15 +976,13 @@
 		<div id="progline" style="margin-bottom: 2vh;">
 			<a href="#popupBasic2" data-rel="popup" data-position-to="window">
 				<div id="progline">
-
-					<img src="img/gym C.png" onclick="catherine();" style="left:96%">
-					<img src="img/gym A.png" onclick="alena();" style="left:0%">
-
+					<img src="img/gym.png" onclick="catherine();" style="left:96%">
+					<img src="img/gym.png" onclick="alena();" style="left:0%">
 				</div>
 			</a>
 			
-			<img src="img/gym me.png" class="me" style="left: 0%; width: 6vw;">
-			<img src="img/flag.png" style="right: -4vw;">
+			<img src="img/gym.png" class="me" style="left: 0%; width: 6vw;">
+			<img src="img/silhouette.png" style="right: -4vw; width: 8vw;">
 			<div id="line">
 				<img src="img/lineline.png">
 			</div>	
@@ -1215,22 +1213,20 @@
 			}
 
 			function alena(){
-				document.getElementById("send3").innerHTML = "<p>Send <strong>Kavya</strong> an emoji!</p>";
+				document.getElementById("send3").innerHTML = "<p>Send <strong>Alena</strong> an emoji!</p>";
 			}
 		</script>
 	
 		<div id="progline">
 			<a href="#popupBasic3" data-rel="popup" data-position-to="window">
 				<div id="progline">
-
-					<img src="img/hikingman C.png" onclick="catherine();" style="left:96%">
-					<img src="img/hikingman K.png" onclick="alena();" style="left:0%">
-
+					<img src="img/hikingman.png" onclick="catherine();" style="left:96%">
+					<img src="img/hikingman.png" onclick="alena();" style="left:0%">
 				</div>
 			</a>
-			<img src="img/hikingman me.png" class="me" style="left: 0%">
+			<img src="img/hikingman.png" class="me" style="left: 0%">
 			
-			<img src="img/flag.png" style="right: -4vw;">
+			<img src="img/mountain.png" style="right: -4vw;">
 		
 			<div id="line"><img src="img/lineline.png"></div>	
 			
@@ -1289,13 +1285,10 @@
 		<h2>Share your accomplishment!</h2>
 
 
-		<div class="fb-share-button" data-href="http://team14.sp16.cs179.org/" data-layout="button" style="margin-bottom:2vh;"></div>
-		<br>
-		<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://team14.sp16.cs179.org/" data-text="Just finished a new challenge in FitFeats!" data-hashtags="fitfeats">Tweet</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		<div class="fb-share-button" data-href="http://team14.sp16.cs179.org/" data-layout="button"></div>
 		
 		<div id="invite">
-			<a href="http://contacts.google.com" data-role="button" data-icon="comment" data-iconpos="notext">Message</a>
+			<a href="http://contacts.google.com" data-role="button" data-icon="phone" data-iconpos="notext">Contacts</a>
 			<a href="http://gmail.com" data-role="button" data-icon="envelope" data-iconpos="notext">Email</a>
 		</div>
 	</div>
