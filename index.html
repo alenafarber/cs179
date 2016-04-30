@@ -112,7 +112,7 @@
 		<div data-role="navbar">
 		<ul>
 			<li><a href="#profile" data-icon="female">Profile</a></li>
-			<li><a href="#trophy" data-icon="external-link3">Trophies</a></li>
+			<li><a href="#trophy" data-icon="external-link3">History</a></li>
 			<li><a href="#time" data-icon="greencheck" style="color: #2e7b76; white-space:normal; background-color: white;">New Challenge</a></li>
 			<li><a href="#newsfeed" data-icon="rss" class="ui-btn-active ui-state-persist">Newsfeed</a></li>
 			<li><a href="#friends" data-icon="group">Friends</a></li>
@@ -164,7 +164,7 @@
 		<div data-role="navbar">
 		<ul>
 			<li><a href="#profile" data-icon="female" class="ui-btn-active ui-state-persist">Profile</a></li>
-			<li><a href="#trophy" data-icon="external-link3">Trophies</a></li>
+			<li><a href="#trophy" data-icon="external-link3">History</a></li>
 			<li><a href="#time" data-icon="greencheck" style="color: #2e7b76; white-space:normal; background-color: white;">New Challenge</a></li>
 			<li><a href="#newsfeed" data-icon="rss">Newsfeed</a></li>
 			<li><a href="#friends" data-icon="group">Friends</a></li>
@@ -186,7 +186,7 @@
 				<h3>Total Miles Run<div class="ui-li-count">47</div></h3>
 				<ul>
 					<li>Manhattan Marathon</li>
-					<li>Another Running Challenge TBD by Us</li>
+					<li>Boston Marathon</li>
 				</ul>
 			</div>
 			<div data-role="collapsible" data-collapsed-icon="external-link3" data-expanded-icon="external-link3">
@@ -197,19 +197,104 @@
 				</ul>
 			</div>
 		</div>
+		
+		<div id="current-chal">
+			<h4>Current Challenges</h4>
+			
+				<ul data-role="listview" data-inset="true">             
+					<li><a href="#progress"><img src="css/png_icons/smallsprint.png" class="ui-li-icon">Manhattan Marathon</a></li>
+				</ul>
+		</div>
+		
+		
+		<div id="done-chal">
+			<h4>Completed Challenges</h4>
+			
+			<ul data-role="listview" data-inset="true">             
+				<li><a href="#results"><img src="css/png_icons/hiking.png" class="ui-li-icon">Climb Mount Everest</a></li>
+				<li><a href="#results2"><img src="css/png_icons/weights.png" class="ui-li-icon">Lift a BMW</a></li>
+			</ul>
+		</div>
+		
 	</div><!-- /content -->
 
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 		<ul>
 			<li><a href="#profile" data-icon="female">Profile</a></li>
-			<li><a href="#trophy" data-icon="external-link3" class="ui-btn-active ui-state-persist">Trophies</a></li>
+			<li><a href="#trophy" data-icon="external-link3" class="ui-btn-active ui-state-persist">History</a></li>
 			<li><a href="#time" data-icon="greencheck" style="color: #2e7b76; white-space:normal; background-color: white;">New Challenge</a></li>
 			<li><a href="#newsfeed" data-icon="rss">Newsfeed</a></li>
 			<li><a href="#friends" data-icon="group">Friends</a></li>
 		</ul>
 		</div>
 	</div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="results">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+	
+	<div data-role="content">
+		<div>
+			<h3>Your stats!</h3>
+			<p>Workout: Climb Mount Everest</p>
+		</div>
+		<div>
+			<ul data-role="listview" data-inset="true">             
+				<li><img src="img/calendar.png" class="ui-li-icon">Date: 4/29/16</a></li>
+				<li><img src="img/fire.png" class="ui-li-icon">Calories burned: 300</li>
+				<li><img src="img/timer.png" class="ui-li-icon">Time: 35 min</li>
+				<li><img src="img/friends.png" class="ui-li-icon">Teammates: Alena and Catherine</li>
+			</ul>
+		</div>
+			
+	</div>
+
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#trophy" data-iconpos="left" data-icon="arrow-l">Back</a></li> <!-- back to Newsfeed, not implemented yet -->
+			<li><a href="#everest2" data-iconpos="right" data-icon="arrow-r">Try this challenge again!</a></li>
+		</ul>
+	</div>
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+<div data-role="page" id="results2">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+	
+	<div data-role="content">
+		<div>
+			<h3>Your stats!</h3>
+			<p>Workout: Lift a BMW</p>
+		</div>
+		<div>
+			<ul data-role="listview" data-inset="true">             
+				<li><img src="img/calendar.png" class="ui-li-icon">Date: 4/12/16</a></li>
+				<li><img src="img/fire.png" class="ui-li-icon">Calories burned: 200</li>
+				<li><img src="img/timer.png" class="ui-li-icon">Time: 20 min</li>
+				<li><img src="img/friends.png" class="ui-li-icon">Teammate: Catherine</li>
+			</ul>
+		</div>
+			
+	</div>
+
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#trophy" data-iconpos="left" data-icon="arrow-l">Back</a></li> <!-- back to Newsfeed, not implemented yet -->
+			<li><a href="#strength2" data-iconpos="right" data-icon="arrow-r">Try this challenge again!</a></li>
+		</ul>
+	</div>
+	</div><!-- /footer -->
+
 </div><!-- /page -->
 
 
@@ -246,7 +331,7 @@
 		<div data-role="navbar">
 		<ul>
 			<li><a href="#profile" data-icon="female">Profile</a></li>
-			<li><a href="#trophy" data-icon="external-link3">Trophies</a></li>
+			<li><a href="#trophy" data-icon="external-link3">History</a></li>
 			<li><a href="#time" data-icon="greencheck" style="color: #2e7b76; white-space:normal; background-color: white;">New Challenge</a></li>
 			<li><a href="#newsfeed" data-icon="rss">Newsfeed</a></li>
 			<li><a href="#friends" data-icon="group" class="ui-btn-active ui-state-persist">Friends</a></li>
@@ -469,17 +554,7 @@
 		results();
 		</script>
 	</div><!-- /content -->
-	
 
-	<!-- Old Listview (formats properly)
-	<div data-role="content">
-		<ul data-role="listview" data-inset="true">             
-			<li><a href="#nyc">Manhattan Half Marathon</a></li>
-			<li><a href="#everest">Climb Mount Everest</a></li>
-			<li><a href="#strength">Lift a BMW</a></li>
-		</ul>
-	</div>
-	-->
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
@@ -537,6 +612,32 @@
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#challenges" data-iconpos="left" data-icon="arrow-l">Back</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</div><!-- /page -->
+
+<div data-role="page" id="strength2">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content" class="center">
+		<p></p>
+		<div><p> This a challenge that will build your arm and back strength, all without any specialized weights. The challenge has three exercises: bicep curls, push ups, and chair dips. You'll need a sturdy chair, stool, or low bench, as well as a heavy object you can hold in your hand (like a water bottle or book).   </p>
+	
+		</div>
+		
+		<a href="#newstrength" data-role="button" data-inline="true">Go Solo</a>
+		<a href="#teamstrength" data-role="button" data-inline="true" >Add Teammates</a>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#results2" data-iconpos="left" data-icon="arrow-l">Back</a></li>
 			</ul>
 		</div>
 	</div>
@@ -778,11 +879,11 @@
 
 <script>
 	function catherine(){
-		document.getElementById("send").innerHTML = "<p>Send <strong>Catherine</strong> a sticker!</p>";
+		document.getElementById("send").innerHTML = "<p>Send <strong>Catherine</strong> an emoji!</p>";
 	}
 
 	function alena(){
-		document.getElementById("send").innerHTML = "<p>Send <strong>Alena</strong> a sticker!</p>";
+		document.getElementById("send").innerHTML = "<p>Send <strong>Alena</strong> an emoji!</p>";
 	}
 </script>
 
@@ -806,9 +907,8 @@
 			<a href="#popupBasic1" data-rel="popup" data-position-to="window">
 				<div id="progline">
 					<img src="img/run.png" onclick="catherine();" style="left:96%">
-					<div id="progline"  style="margin-bottom: 15vh;">
 					<img src="img/run.png" onclick="alena();" style="left:0%">
-					</div>
+					
 				</div>
 			</a>
 			
@@ -818,13 +918,14 @@
 			
 		</div>
 		
+		
 		<div data-role="popup" id="popupBasic1" class="ui-content" data-type="horizontal">
-			<p id="send">Send <strong>Catherine</strong> a sticker!</p>
+			<p id="send">Send <strong>Catherine</strong> an emoji!</p>
 			<div  data-type="horizontal" style="display: inline-block;" id="invite">
-				<a href="#progress" data-role="button" data-icon="heart" data-iconpos="notext"></a>
 				<a href="#progress" data-role="button" data-icon="glasses" data-iconpos="notext"></a>
 				<a href="#progress" data-role="button" data-icon="thumbs-up" data-iconpos="notext"></a>
 				<a href="#progress" data-role="button" data-icon="happy" data-iconpos="notext"></a>
+				<a href="#progress" data-role="button" data-icon="heart" data-iconpos="notext"></a>
 				<a href="#progress" data-role="button" data-icon="smiley" data-iconpos="notext"></a>
 			</div>
 		</div>
@@ -862,13 +963,21 @@
 			<p> Tap your friends to send them emojis! </p>
 		</div>
 	
-		
+		<script>
+			function catherine(){
+				document.getElementById("send2").innerHTML = "<p>Send <strong>Catherine</strong> an emoji!</p>";
+			}
+
+			function alena(){
+				document.getElementById("send2").innerHTML = "<p>Send <strong>Alena</strong> an emoji!</p>";
+			}
+		</script>
 		
 		<div id="progline" style="margin-bottom: 2vh;">
-			<a href="#popupBasic1" data-rel="popup">
+			<a href="#popupBasic2" data-rel="popup" data-position-to="window">
 				<div id="progline">
-					<img src="img/gym.png" style="left:96%">
-					<img src="img/gym.png" style="left:0%">
+					<img src="img/gym.png" onclick="catherine();" style="left:96%">
+					<img src="img/gym.png" onclick="alena();" style="left:0%">
 				</div>
 			</a>
 			
@@ -879,14 +988,19 @@
 			</div>	
 		</div>
 		
-		<div data-role="popup" id="popupBasic1" class="ui-content">
-			
-			<img src="img/thumb.png" style="width: 3vw; PADDING-RIGHT: 2vw;">
-			<img src="img/favorite.png" style="width: 3vw; PADDING-RIGHT: 2vw;">
-			<img src="img/emoticon.png" style="width: 3vw; PADDING-RIGHT: 2vw;">
-			<img src="img/smiley.png" style="width: 3vw; PADDING-RIGHT: 2vw;">
-			
+
+		
+		<div data-role="popup" id="popupBasic2" class="ui-content" data-type="horizontal">
+			<p id="send2">Send <strong>Catherine</strong> an emoji!</p>
+			<div  data-type="horizontal" style="display: inline-block;" id="invite">
+				<a href="#progstrength" data-role="button" data-icon="glasses" data-iconpos="notext"></a>
+				<a href="#progstrength" data-role="button" data-icon="thumbs-up" data-iconpos="notext"></a>
+				<a href="#progstrength" data-role="button" data-icon="happy" data-iconpos="notext"></a>
+				<a href="#progstrength" data-role="button" data-icon="heart" data-iconpos="notext"></a>
+				<a href="#progstrength" data-role="button" data-icon="smiley" data-iconpos="notext"></a>
+			</div>
 		</div>
+		
 		
 		<div>
 			<ul data-role="listview" data-inset="true">     
@@ -898,7 +1012,7 @@
 		
 
 		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:2vh;">
-			<p>Jenna just sent you a thumbs up!</p>
+			<p>Catherine just sent you a thumbs up!</p>
 		</div>
 	
 		<div>
@@ -936,6 +1050,32 @@
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#challenges" data-iconpos="left" data-icon="arrow-l">Back</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</div><!-- /page -->
+
+<div data-role="page" id="everest2">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content" class="center">
+		<p></p>
+		<div><p>This is an interval workout alternating power-walking for cardio and squats for strength. You'll walk at a brisk pace to follow the main trails, and do squats every half mile to scale the passes. This workout will exercise your legs, arms, and abs. </p>
+	
+		</div>
+		
+		<a href="#neweverest" data-role="button" data-inline="true">Go Solo</a>
+		<a href="#teameverest" data-role="button" data-inline="true">Add Teammates</a>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#results" data-iconpos="left" data-icon="arrow-l">Back</a></li>
 			</ul>
 		</div>
 	</div>
@@ -1067,11 +1207,21 @@
 			<p> Tap your friends to send them emojis! </p>
 		</div>
 	
+		<script>
+			function catherine(){
+				document.getElementById("send3").innerHTML = "<p>Send <strong>Catherine</strong> an emoji!</p>";
+			}
+
+			function alena(){
+				document.getElementById("send3").innerHTML = "<p>Send <strong>Alena</strong> an emoji!</p>";
+			}
+		</script>
+	
 		<div id="progline">
-			<a href="#popupBasic2" data-rel="popup">
+			<a href="#popupBasic3" data-rel="popup" data-position-to="window">
 				<div id="progline">
-					<img src="img/hikingman.png" style="left:96%">
-					<img src="img/hikingman.png" style="left:0%">
+					<img src="img/hikingman.png" onclick="catherine();" style="left:96%">
+					<img src="img/hikingman.png" onclick="alena();" style="left:0%">
 				</div>
 			</a>
 			<img src="img/hikingman.png" class="me" style="left: 0%">
@@ -1082,14 +1232,17 @@
 			
 		</div>
 		
-		<div data-role="popup" id="popupBasic2" class="ui-content">
-			
-			<img src="img/thumb.png" style="width: 3vw; PADDING-RIGHT: 2vw;">
-			<img src="img/favorite.png" style="width: 3vw; PADDING-RIGHT: 2vw;">
-			<img src="img/emoticon.png" style="width: 3vw; PADDING-RIGHT: 2vw;">
-			<img src="img/smiley.png" style="width: 3vw; PADDING-RIGHT: 2vw;">
-			
+		<div data-role="popup" id="popupBasic3" class="ui-content" data-type="horizontal">
+			<p id="send3">Send <strong>Catherine</strong> an emoji!</p>
+			<div  data-type="horizontal" style="display: inline-block;" id="invite">
+				<a href="#progeverest" data-role="button" data-icon="glasses" data-iconpos="notext"></a>
+				<a href="#progeverest" data-role="button" data-icon="thumbs-up" data-iconpos="notext"></a>
+				<a href="#progeverest" data-role="button" data-icon="happy" data-iconpos="notext"></a>
+				<a href="#progeverest" data-role="button" data-icon="heart" data-iconpos="notext"></a>
+				<a href="#progeverest" data-role="button" data-icon="smiley" data-iconpos="notext"></a>
+			</div>
 		</div>
+
 		
 		<div>
 			<ul data-role="listview" data-inset="true">     
@@ -1099,7 +1252,7 @@
 		</div>
 		
 		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:2vh;">
-			<p>Jenna just sent you a thumbs up!</p>
+			<p>Catherine just sent you a thumbs up!</p>
 		</div>
 	
 		<div>
