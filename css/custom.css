@@ -94,7 +94,7 @@
 
 
 
-#progline {
+.progline {
 	text-align: left;
 	position: relative;
 	width: 80%;
@@ -103,22 +103,22 @@
 	height: 7vw;
 }
 
-#progline > img {
+.progline > img {
 	position: absolute;
 	bottom: 1vh;
-	width: 5vw;
-}
-
-#progline .me {
 	width: 7vw;
 }
 
-#line {
+.progline .me {
+	width: 10vw;
+}
+
+.line {
 	position: absolute;
 	bottom: 0;
 }
 
-#line img {	
+.line img {	
 	max-width:100%;
 	max-height:100%;
 }
