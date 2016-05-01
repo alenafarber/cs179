@@ -1,3 +1,5 @@
+// THIS CODE IS FOR THE EMOJI POPUPS
+
 function catherine(){
 	document.getElementById("send").innerHTML = "<p>Send <strong>Catherine</strong> an emoji!</p>";
 }
@@ -22,6 +24,27 @@ function alena3(){
 	document.getElementById("send3").innerHTML = "<p>Send <strong>Kavya</strong> an emoji!</p>";
 }
 
+
+// THIS CODE FOR FLAVOR TEXT ANIMATION
+
+var texts = {runText: ["cucumber", "orangutan", "antidisestablishmentarianism"], 
+			strengthText: ["unacceptable", "ludicrous", "preposterous"], 
+			everestText: ["ridiculous", "disrespectful", "zaroonsky"]};
+
+var counters = {runText: 0, 
+			strengthText: 0, 
+			everestText: 0};
+
+var changeText = function(textID) {
+	counters[textID]++
+	var textList = texts[textID];
+	var newtext = textList[counters[textID] % textList.length];
+	document.getElementById(textID).innerHTML = newtext;
+}
+
+
+
+
 // BELOW THIS POINT IS CODE FOR PROGRESS SCREEN ANIMATION
 
 
@@ -33,7 +56,7 @@ function alena3(){
 // the multi-step workouts, so i chose to write a separate
 // frame function for the run screen because it is much simpler
 
-function run() {
+var run = function() {
 
 	var pic = $('#run-me')[0];
 	var text = $('#run-prog')[0];
