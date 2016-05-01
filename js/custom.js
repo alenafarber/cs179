@@ -1,3 +1,30 @@
+function catherine(){
+	document.getElementById("send").innerHTML = "<p>Send <strong>Catherine</strong> an emoji!</p>";
+}
+
+function alena(){
+	document.getElementById("send").innerHTML = "<p>Send <strong>Alena</strong> an emoji!</p>";
+}
+
+function catherine2(){
+	document.getElementById("send2").innerHTML = "<p>Send <strong>Catherine</strong> an emoji!</p>";
+}
+
+function alena2(){
+	document.getElementById("send2").innerHTML = "<p>Send <strong>Alena</strong> an emoji!</p>";
+}
+
+function catherine3(){
+	document.getElementById("send3").innerHTML = "<p>Send <strong>Catherine</strong> an emoji!</p>";
+}
+
+function alena3(){
+	document.getElementById("send3").innerHTML = "<p>Send <strong>Kavya</strong> an emoji!</p>";
+}
+
+// BELOW THIS POINT IS CODE FOR PROGRESS SCREEN ANIMATION
+
+
 // below code is for the RUNNING progress screen
 
 // i could have written it to use the same framework
