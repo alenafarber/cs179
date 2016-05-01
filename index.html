@@ -977,8 +977,8 @@
 	<div data-role="content" class="center">
 		<div>
 			<h1>Challenge in Progress</h1>
-			<p><span id="run-prog">0</span>% Complete</p>
-			<p>3.2 miles left</p>
+			<p><span class="prog-text">0</span>% Complete</p>
+			<p><span class="miles-text">6.0</span> miles left</p>
 			<p> Tap your friends to send them emojis! </p>
 		</div>
 		
@@ -989,7 +989,7 @@
 					<img src="img/run A.png" onclick="alena();" style="left:0%">
 				</div>
 			</a>
-			<img src="img/run me.png" id="run-me" class="me" style="left: 0%">
+			<img src="img/run me.png" class="me" style="left: 0%">
 			<img src="img/flag.png" style="right: -4vw;">
 			<div class="line"><img src="img/lineline.png"></div>	
 		</div>
@@ -1008,13 +1008,13 @@
 		
 		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:10vh;">
 			<script type="text/javascript">
-				setInterval("changeText('runText')", 500);
+				setInterval("changeText('runText')", 1500);
 			</script>
 			<p id="runText">Catherine just sent you a thumbs up!</p>
 		</div>
 	
 		<div>
-			<a id="run-button" class="ui-btn ui-input-btn ui-shadow" data-inline="true" onclick="run()">Simulate Workout Progress</a>
+			<a id="run-button" class="ui-btn ui-input-btn ui-shadow" data-inline="true" onclick="run('progress')">Simulate Workout Progress</a>
 		</div>
 
 	</div><!-- /content -->
@@ -1037,39 +1037,25 @@
 	<div data-role="content" class="center">
 		<div>
 			<h1>Challenge in Progress</h1>
-			<p>20% Complete</p>
-			<p>3.2 miles left</p>
+			<p><span class="prog-text">0</span>% Complete</p>
+			<p><span class="miles-text">6.0</span> miles left</p>
 		</div>
 		
-		<script>
-			function catherine(){
-	
-				document.getElementById("send").innerHTML = "<p>Send <strong>Catherine</strong> an emoji!</p>";
-			}
-
-			function alena(){
-	
-				document.getElementById("send").innerHTML = "<p>Send <strong>Alena</strong> an emoji!</p>";
-			}
-		</script>
-		
-		<div id="progline"  style="margin-bottom: 15vh;">
-			<a href="#popupBasic1" data-rel="popup" data-position-to="window">
-				<div id="progline">
-					
-				</div>
-			</a>
+		<div class="progline"  style="margin-bottom: 15vh;">
 			<img src="img/run me.png" id="run-me" class="me" style="left: 0%">
 			<img src="img/flag.png" style="right: -4vw;">
 			<div class="line"><img src="img/lineline.png"></div>	
 		</div>
 		
 		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:10vh;">
-			<p>Catherine just sent you a thumbs up!</p>
+			<script type="text/javascript">
+				setInterval("changeText('runSolo')", 1500);
+			</script>
+			<p id="runSolo">running filler</p>
 		</div>
 	
 		<div>
-			<a id="run-button" class="ui-btn ui-input-btn ui-shadow" data-inline="true" onclick="run()">Simulate Workout Progress</a>
+			<a id="run-button" class="ui-btn ui-input-btn ui-shadow" data-inline="true" onclick="run('progsolo')">Simulate Workout Progress</a>
 		</div>
 
 	</div><!-- /content -->
@@ -1098,7 +1084,7 @@
 			<p> Tap your friends to send them emojis! </p>
 		</div>
 		
-		<div class="progline" style="margin-bottom: 2vh; margin-top:5vh;">">
+		<div class="progline" style="margin-bottom: 2vh; margin-top:5vh;">
 			<a href="#popupBasic2" data-rel="popup" data-position-to="window">
 				<div class="progline">
 					<img src="img/gym C.png" onclick="catherine2();" style="left:96%">
@@ -1113,8 +1099,6 @@
 			</div>	
 		</div>
 		
-
-		
 		<div data-role="popup" id="popupBasic2" class="ui-content" data-type="horizontal">
 			<p id="send2">Send <strong>Catherine</strong> an emoji!</p>
 			<div  data-type="horizontal" style="display: inline-block;" id="invite">
@@ -1128,17 +1112,17 @@
 		
 		
 		<div>
-			<ul data-role="listview" data-inset="true">     
-				<label><input type="checkbox" name="checkbox-0" id="pushup" onchange="boxMove(this, 3, 'progstrength')"/> Push Ups</label>
-				<label><input type="checkbox" name="checkbox-0" id="chair" onchange="boxMove(this, 3, 'progstrength')"/> Chair Dips </label>
-				<label><input type="checkbox" name="checkbox-0" id="bicep" onchange="boxMove(this, 3, 'progstrength')"/> Bicep Curls </label>        
+			<ul data-role="listview" data-inset="true">
+				<label><input type="checkbox" name="checkbox-0" onchange="boxMove(this, 3, 'progstrength')"/> Push Ups</label>
+				<label><input type="checkbox" name="checkbox-0" onchange="boxMove(this, 3, 'progstrength')"/> Chair Dips </label>
+				<label><input type="checkbox" name="checkbox-0" onchange="boxMove(this, 3, 'progstrength')"/> Bicep Curls </label>        
 			</ul>
 		</div>
 		
 
 		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:2vh;">
 			<script type="text/javascript">
-				setInterval("changeText('strengthText')", 500);
+				setInterval("changeText('strengthText')", 1500);
 			</script>
 			<p id="strengthText">Catherine just sent you a thumbs up!</p>
 		</div>
@@ -1168,42 +1152,33 @@
 	<div data-role="content" class="center">
 		<div>
 			<h1>Challenge in Progress</h1>
-			<p>20% Complete</p>
+			<p><span class="prog-text">0</span>% Complete</p>
 			<p>Check off the boxes as you complete the exercises. Do 5 repetitions to do the standard workout, and 10 repetitions for an extra challenge.</p>
 		</div>
 	
-		<div id="progline" style="margin-bottom: 2vh;">
-			<a href="#popupBasic2" data-rel="popup" data-position-to="window">
-				<div id="progline">
-
-				</div>
-			</a>
-			
+		<div class="progline" style="margin-bottom: 2vh; margin-top:5vh;">
 			<img src="img/gym me.png" class="me" style="left: 0%; width: 6vw;">
 			<img src="img/flag.png" style="right: -4vw;">
-			<div id="line">
+			<div class="line">
 				<img src="img/lineline.png">
 			</div>	
 		</div>
-		
 
 		<div>
-			<ul data-role="listview" data-inset="true">     
-				<label><input type="checkbox" name="checkbox-0"/> Push Ups</label>
-				<label><input type="checkbox" name="checkbox-0"/> Chair Dips </label>
-				<label><input type="checkbox" name="checkbox-0"/> Bicep Curls </label>        
+			<ul data-role="listview" data-inset="true">
+				<label><input type="checkbox" name="checkbox-0" onchange="boxMove(this, 3, 'progstrengthsolo')"/> Push Ups</label>
+				<label><input type="checkbox" name="checkbox-0" onchange="boxMove(this, 3, 'progstrengthsolo')"/> Chair Dips </label>
+				<label><input type="checkbox" name="checkbox-0" onchange="boxMove(this, 3, 'progstrengthsolo')"/> Bicep Curls </label>        
 			</ul>
 		</div>
 		
 
 		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:2vh;">
-			<p>Catherine just sent you a thumbs up!</p>
+			<script type="text/javascript">
+				setInterval("changeText('strengthSolo')", 1500);
+			</script>
+			<p id="strengthSolo">MORE FILLER TEXT</p>
 		</div>
-	<!--
-		<div>
-			<a class="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Simulate Workout Progress</a>
-		</div>
-		-->
 
 	</div><!-- /content -->
 	
@@ -1474,7 +1449,7 @@
 		
 		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:2vh;">
 			<script type="text/javascript">
-				setInterval("changeText('everestText')", 500);
+				setInterval("changeText('everestText')", 1500);
 			</script>
 			<p id="everestText">Catherine just sent you a thumbs up!</p>
 		</div>
@@ -1499,33 +1474,28 @@
 	<div data-role="content" class="center">
 		<div>
 			<h1>Challenge in Progress</h1>
-			<p>20% Complete</p>
+			<p><span class="prog-text">0</span>% Complete</p>
 			<p>Check off the boxes as you complete the exercises. Do 5 repetitions to do the standard workout, and 10 repetitions for an extra challenge.</p>
 		</div>
 	
-		<div id="progline">
-			<a href="#popupBasic3" data-rel="popup" data-position-to="window">
-				<div id="progline">
-
-				</div>
-			</a>
-			<img src="img/hikingman me.png" class="me" style="left: 0%">
-			
+		<div class="progline" style="margin-top:5vh;">
+			<img src="img/hikingman me.png" class="me" style="left: 0%; width:7vw;">
 			<img src="img/flag.png" style="right: -4vw;">
-		
-			<div id="line"><img src="img/lineline.png"></div>	
-			
+			<div class="line"><img src="img/lineline.png"></div>
 		</div>
-		
+
 		<div>
 			<ul data-role="listview" data-inset="true">     
-				<label><input type="checkbox" name="checkbox-0"/> Power Walking </label>
-				<label><input type="checkbox" name="checkbox-1"/> Squats </label>
+				<label><input type="checkbox" name="checkbox-0" onchange="boxMove(this, 2, 'progeverestsolo')"/> Power Walking </label>
+				<label><input type="checkbox" name="checkbox-1" onchange="boxMove(this, 2, 'progeverestsolo')"/> Squats </label>
 			</ul>
 		</div>
-		
+
 		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:2vh;">
-			<p>Catherine just sent you a thumbs up!</p>
+			<script type="text/javascript">
+				setInterval("changeText('everestSolo')", 1500);
+			</script>
+			<p id="everestSolo">MORE FILLER TEXT</p>
 		</div>
 
 	</div><!-- /content -->

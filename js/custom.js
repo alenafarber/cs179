@@ -27,20 +27,44 @@ function alena3(){
 
 // THIS CODE FOR FLAVOR TEXT ANIMATION
 
-var texts = {runText: ["cucumber", "orangutan", "antidisestablishmentarianism"], 
-			strengthText: ["unacceptable", "ludicrous", "preposterous"], 
-			everestText: ["ridiculous", "disrespectful", "zaroonsky"]};
-
-var counters = {runText: 0, 
-			strengthText: 0, 
-			everestText: 0};
-
 var changeText = function(textID) {
 	counters[textID]++
 	var textList = texts[textID];
 	var newtext = textList[counters[textID] % textList.length];
 	document.getElementById(textID).innerHTML = newtext;
 }
+
+var texts = {runText: ["Wow! You just zoomed by all the traffic in Times Square!", 
+						"Alena just sent you a thumbs up!",
+						"You just passed the Empire State Building. Over halfway there!", 
+						"Catherine just sent you a heart!",
+						"The birds are chirping in Washington Square Park. Here comes the home stretch!"], 
+			strengthText: ["You’ve lifted the weight of the BMW’s eight-cylinder engine already! Keep going!", 
+							"Catherine just sent you a heart!",
+							"Put some more elbow grease into it! You’re over halfway there.", 
+							"Alena just sent you a thumbs up!",
+							"Wow - the BMW’s beginning to come off the ground!"], 
+			everestText: ["Tourists at the base of the mountain watch in awe as you embark on your climb!", 
+							"Alena just sent you a thumbs up!",
+							"You narrowly avoid a small avalanche by deftly clambering onto a nearby glacier. Whew! Halfway to the peak.", 
+							"Catherine just sent you a heart!",
+							"The summit is within view!"],
+			runSolo: ["Wow! You just zoomed by all the traffic in Times Square!", 
+						"You just passed the Empire State Building. Over halfway there!", 
+						"The birds are chirping in Washington Square Park. Here comes the home stretch!"], 
+			strengthSolo: ["You’ve lifted the weight of the BMW’s eight-cylinder engine already! Keep going!", 
+							"Put some more elbow grease into it! You’re over halfway there.", 
+							"Wow - the BMW’s beginning to come off the ground!"], 
+			everestSolo: ["Tourists at the base of the mountain watch in awe as you embark on your climb!", 
+							"You narrowly avoid a small avalanche by deftly clambering onto a nearby glacier. Whew! Halfway to the peak.", 
+							"The summit is within view!"]};
+
+var counters = {runText: 0, 
+			strengthText: 0, 
+			everestText: 0,
+			runSolo: 0, 
+			strengthSolo: 0, 
+			everestSolo: 0};
 
 
 
@@ -56,10 +80,12 @@ var changeText = function(textID) {
 // the multi-step workouts, so i chose to write a separate
 // frame function for the run screen because it is much simpler
 
-var run = function() {
+var run = function(pageID) {
 
-	var pic = $('#run-me')[0];
-	var text = $('#run-prog')[0];
+	var pic = document.getElementById(pageID).getElementsByClassName('me')[0];
+	var text = document.getElementById(pageID).getElementsByClassName('prog-text')[0];
+	var miles = document.getElementById(pageID).getElementsByClassName('miles-text')[0];
+
 	var left = 0;
 
 	function frame() {
@@ -67,6 +93,7 @@ var run = function() {
 		
 		pic.style.left = left + '%'; // show frame
 		text.innerHTML = Math.round(left/96 * 100);
+		miles.innerHTML =  (6 - (left / 96 * 6)).toFixed(1);
 
 		if (left == 96)  {// check finish condition
 			clearInterval(runner);
@@ -87,8 +114,8 @@ var run = function() {
 // that way, the code works equally well for each of the 2 pages
 
 // two variable objects to store animation values for each of the two pages.
-var target = {progstrength: 0, progeverest: 0};
-var locs = {progstrength: 0, progeverest: 0};
+var target = {progstrength: 0, progeverest: 0, progstrengthsolo: 0, progeverestsolo: 0};
+var locs = {progstrength: 0, progeverest: 0, progstrengthsolo: 0, progeverestsolo: 0};
 
 // determines if box was checked or unchecked, and adjusts animation accordingly
 var boxMove = function(box, total, pageID) {
