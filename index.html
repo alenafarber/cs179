@@ -448,13 +448,14 @@
 		<div style="text-align: center">
 		<img src="img/body annotated.png" width="203" height="555" alt="Body" usemap="#bodymap">
 
-		<map name="bodymap">
-		  <area shape="rect" href="javascript:alert('Shoulders selected');" coords="26,87,179,125" alt="Shoulders">
-		  <area shape="rect" href="javascript:alert('Abs selected');" coords="63,167,150,246" alt="Abs">
-		  <area shape="rect" href="javascript:alert('Biceps selected');" coords="17,114,46,252" alt="Biceps">
-		  <area shape="rect" href="javascript:alert('Biceps selected');" coords="144,130,194,273" alt="Biceps">
-		  <area shape="rect" href="javascript:alert('Legs selected');" coords="45,259,164,532" alt="Legs">
+		<map id="bodymap" name="bodymap">
+			<area shape="poly" href="javascript:alert('Shoulders selected');" coords="32,134,47,88,159,95,174,142,156,146,151,135,142,157,123,165,101,153,80,164,58,153,57,139,51,135,47,148" alt="Shoulders">
+			<area shape="poly" href="javascript:alert('Biceps selected');" coords="12,248,35,133,47,148,51,135,57,141,59,155,28,261,28,261" alt="Biceps 1">
+			<area shape="poly" href="javascript:alert('Biceps selected');" coords="193,249,168,141,141,150,178,260" href="" alt="Biceps 2">
+			<area shape="poly" href="javascript:alert('Abs selected');" coords="60,229,71,195,59,155,81,162,102,153,126,166,145,156,133,201,152,242,106,279,52,236" alt="Abs">
+			<area shape="poly" href="javascript:alert('Legs selected');" coords="50,543,62,387,50,255,102,281,161,246,146,389,153,542" alt="Quads">
 		</map>
+
 		</div>
 
 	</div><!-- /content -->
@@ -480,12 +481,13 @@
 		<div style="text-align: center">
 		<img src="img/joints.png" width="203" height="555" alt="Joints" usemap="#joints" border="0">
 
-		<map name="joints" id="joints">
-			<area shape="poly" href="javascript:alert('Shoulders selected');" coords=" 181,75, 183,169, 34,172, 30,67, 182,73" alt="Shoulders"/>
-			<area shape="poly" href="javascript:alert('Hips selected');" coords=" 38,223, 159,219, 167,286, 39,290, 39,227" alt="Hips"/>
-			<area shape="poly" href="javascript:alert('Knees selected');" coords=" 46,330, 175,328, 174,411, 46,405, 45,330" alt="Knees"/>
-			<area shape="poly" href="javascript:alert('Ankles selected');" coords=" 43,460, 160,458, 158,526, 47,521, 45,465" alt="Ankles"/>
+		<map id="joints" name="joints">
+			<area shape="poly" href="javascript:alert('Shoulders selected');" coords="27,137,41,84,173,94,181,145,99,152" alt="Shoulders">
+			<area shape="poly" href="javascript:alert('Hips selected');" coords="48,228,158,229,165,303,97,305,42,271" alt="Hips">
+			<area shape="poly" href="javascript:alert('Knees selected');" coords="55,357,150,356,147,419,63,412" alt="Knees">
+			<area shape="poly" href="javascript:alert('Ankles selected');" coords="61,475,151,474,152,534,64,528" alt="Ankles">
 		</map>
+
 		</div>
 	</div><!-- /content -->
 
@@ -578,8 +580,19 @@
 	
 		</div>
 		
-		<a href="#new" data-role="button" data-inline="true">Go Solo</a>
-		<a href="#team" data-role="button" data-inline="true">Add Teammates</a>	
+		<a href="#nycsolo" data-role="button" data-rel="popup">Go Solo</a>
+		<div data-role="popup" id="nycsolo" data-overlay-theme="b">
+		  <div data-role="main" class="ui-content">
+		  	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><br>
+		  	<p>Is this your first time doing the challenge?</p>
+		  	<p>Check out the demo, or proceed to the workout!</p>
+			<a href="#videosolo" data-role="button" data-inline="true">Go to Demo</a>
+			<a href="#progsolo" data-role="button" data-inline="true">Start Challenge!</a>
+			</div>
+		</div>
+		
+		<a href="#team" data-role="button">Add Teammates</a>	
+
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-id="navbar" data-position="fixed">
@@ -604,8 +617,19 @@
 	
 		</div>
 		
-		<a href="#newstrength" data-role="button" data-inline="true">Go Solo</a>
-		<a href="#teamstrength" data-role="button" data-inline="true" >Add Teammates</a>	
+		<a href="#str1solo" data-role="button" data-rel="popup">Go Solo</a>
+		<div data-role="popup" id="str1solo" data-overlay-theme="b">
+		  <div data-role="main" class="ui-content">
+		  	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><br>
+		  	<p>Is this your first time doing the challenge?</p>
+		  	<p>Check out the demo, or proceed to the workout!</p>
+			<a href="#videostrengthsolo" data-role="button" data-inline="true">Go to Demo</a>
+			<a href="#progstrengthsolo" data-role="button" data-inline="true">Start Challenge!</a>
+			</div>
+		</div>
+		
+		<a href="#teamstrength" data-role="button">Add Teammates</a>	
+
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-id="navbar" data-position="fixed">
@@ -630,8 +654,20 @@
 	
 		</div>
 		
-		<a href="#newstrength" data-role="button" data-inline="true">Go Solo</a>
-		<a href="#teamstrength" data-role="button" data-inline="true" >Add Teammates</a>	
+		<a href="#str2solo" data-role="button" data-rel="popup">Go Solo</a>
+		<div data-role="popup" id="str2solo" data-overlay-theme="b">
+		  <div data-role="main" class="ui-content">
+		  	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><br>
+		  	<p>Is this your first time doing the challenge?</p>
+		  	<p>Check out the demo, or proceed to the workout!</p>
+			<a href="#videostrengthsolo" data-role="button" data-inline="true">Go to Demo</a>
+			<a href="#progstrengthsolo" data-role="button" data-inline="true">Start Challenge!</a>
+			</div>
+		</div>
+		
+		<a href="#teamstrength" data-role="button">Add Teammates</a>	
+
+
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-id="navbar" data-position="fixed">
@@ -677,13 +713,24 @@
 				</div>
 				</a>
 			</div>
+
+			<a href="#nycteam" data-role="button" data-rel="popup">Start</a>
+			<div data-role="popup" id="nycteam" data-overlay-theme="b">
+			  <div data-role="main" class="ui-content">
+			  	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><br>
+			  	<p>Is this your first time doing the challenge?</p>
+			  	<p>Check out the demo, or proceed to the workout!</p>
+				<a href="#video" data-role="button" data-inline="true">Go to Demo</a>
+				<a href="#progress" data-role="button" data-inline="true">Start Challenge!</a>
+				</div>
+			</div>
+
 	</div><!--content-->
 	
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#nyc" data-iconpos="left" data-icon="arrow-l">Back</a></li>
-				<li><a href="#new" data-iconpos="right" data-icon="arrow-r">Next</a></li>
 			</ul>
 		</div>
 	</div>
@@ -723,60 +770,19 @@
 				</div>
 				</a>
 			</div>
-	</div><!--content-->
-	
-	<div data-role="footer" data-id="navbar" data-position="fixed">
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#strength" data-iconpos="left" data-icon="arrow-l">Back</a></li>
-				<li><a href="#newstrength" data-iconpos="right" data-icon="arrow-r">Next</a></li>
-			</ul>
-		</div>
-	</div>
-	
-</div><!-- /page -->
 
-<div data-role="page" id="new">
 
-	<div data-role="header" data-id="header" data-position="fixed">
-		<h1>FitFeats</h1>
-	</div>
-
-	<div data-role="content" class="center">
-		
-		<div>
-			<h1>Is this your first time doing this workout?</h1>
-			<h3>Check out the demo, or proceed to workout!</h3>
-			<a href="#video" data-role="button" data-inline="true">Go to Demo</a>
-			<a href="#progress" data-role="button" data-inline="true">Start Challenge!</a>
-		</div>
-
-	</div><!--content-->
-	
-	<div data-role="footer" data-id="navbar" data-position="fixed">
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#nyc" data-iconpos="left" data-icon="arrow-l">Back</a></li>
-			</ul>
-		</div>
-	</div>
-	
-</div><!-- /page -->
-
-<div data-role="page" id="newstrength">
-
-	<div data-role="header" data-id="header" data-position="fixed">
-		<h1>FitFeats</h1>
-	</div>
-
-	<div data-role="content" class="center">
-		
-		<div>
-			<h1>Is this your first time doing this workout?</h1>
-			<h3>Check out the demo, or proceed to workout!</h3>
+		<a href="#strteam" data-role="button" data-rel="popup">Start</a>
+		<div data-role="popup" id="strteam" data-overlay-theme="b">
+		  <div data-role="main" class="ui-content">
+		  	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><br>
+		  	<p>Is this your first time doing the challenge?</p>
+		  	<p>Check out the demo, or proceed to the workout!</p>
 			<a href="#videostrength" data-role="button" data-inline="true">Go to Demo</a>
 			<a href="#progstrength" data-role="button" data-inline="true">Start Challenge!</a>
+			</div>
 		</div>
+
 
 	</div><!--content-->
 	
@@ -830,6 +836,92 @@
 	</div>
 	
 </div><!-- /page -->
+
+<div data-role="page" id="videosolo">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+	
+	<div data-role="content" class="center">
+	
+		<div>
+
+		<h3>Proper jogging form:</h3>
+		<iframe width="420" height="315"
+			src="https://www.youtube.com/embed/e7m205ZIxBE">
+		</iframe>
+
+		<h3>Tips for this workout:</h3>
+		<ul>
+			<li><p>Bring water or a sports drink with you and keep hydrated.</p></li>
+			<li><p>Pace yourself; you do not have to complete the entire workout in one session.</p></li>
+			<li><p>Land on the middle of your foot and roll through to your toes to avoid stressing your calves or shins.</p></li></li>
+		</ul>
+
+		<h2>IMPORTANT: If you feel discomfort or pain at any time, stop the workout to avoid injury!</h2>
+
+		</div>
+
+	</div><!--content-->
+	
+
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#nyc" data-iconpos="left" data-icon="arrow-l">Back</a></li>
+				<li><a href="#progsolo" data-iconpos="right" data-icon="arrow-r">Start Challenge!</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</div><!-- /page -->
+
+<div data-role="page" id="videostrengthsolo">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+	
+	<div data-role="content" class="center">
+	
+		<div>
+			<h2>This challenge has three parts. Check out instructional videos for all three sections here:</h2>
+		</div>
+		
+		<h3>How to do a push up:</h3>
+		<p> To decrease difficulty, modify by resting on your knees, not your toes. To increase difficulty, rest your feet on a surface a few inches off the ground. <p>	
+		<iframe width="420" height="315"
+			src="https://www.youtube.com/embed/eFOSh8vpd6I">
+		</iframe>
+		
+		<h3>How to do a chair dip:</h3> 
+		<p> This exercise can be done with a sturdy chair, stool, step, bench or any other flat, elevated surface that is about 2 feet off the ground <p>
+		<iframe width="420" height="315"
+			src="https://www.youtube.com/embed/6kALZikXxLc">
+		</iframe>
+		
+		<h3>How to do a bicep curl:</h3> 
+		<p> This exercise can be done using any heavy object you find at home, including water bottles, books, bottles of laundry detergent, etc. <p>
+		<img src="img/bicepcurl.jpg">
+
+		<h2>IMPORTANT: If you feel discomfort or pain at any time, stop the workout to avoid injury!</h2>
+		
+
+	</div><!--content-->
+	
+
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#strength" data-iconpos="left" data-icon="arrow-l">Back</a></li>
+				<li><a href="#progstrengthsolo" data-iconpos="right" data-icon="arrow-r">Start Challenge!</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</div><!-- /page -->
+
 
 <div data-role="page" id="videostrength">
 
@@ -936,6 +1028,62 @@
 	</div>
 </div><!-- /page -->
 
+<div data-role="page" id="progsolo">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content" class="center">
+		<div>
+			<h1>Challenge in Progress</h1>
+			<p>20% Complete</p>
+			<p>3.2 miles left</p>
+		</div>
+		
+		<script>
+			function catherine(){
+	
+				document.getElementById("send").innerHTML = "<p>Send <strong>Catherine</strong> an emoji!</p>";
+			}
+
+			function alena(){
+	
+				document.getElementById("send").innerHTML = "<p>Send <strong>Alena</strong> an emoji!</p>";
+			}
+		</script>
+		
+		<div id="progline"  style="margin-bottom: 15vh;">
+			<a href="#popupBasic1" data-rel="popup" data-position-to="window">
+				<div id="progline">
+					
+				</div>
+			</a>
+			<img src="img/run me.png" id="run-me" class="me" style="left: 0%">
+			<img src="img/flag.png" style="right: -4vw;">
+			<div class="line"><img src="img/lineline.png"></div>	
+		</div>
+		
+		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:10vh;">
+			<p>Catherine just sent you a thumbs up!</p>
+		</div>
+	
+		<div>
+			<a id="run-button" class="ui-btn ui-input-btn ui-shadow" data-inline="true" onclick="run()">Simulate Workout Progress</a>
+		</div>
+
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#newsfeed" data-iconpos="right" data-icon="arrow-r">I'm done for now!</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->
+
+
 <div data-role="page" id="progstrength">
 
 	<div data-role="header" data-id="header" data-position="fixed">
@@ -1011,6 +1159,63 @@
 	</div>
 </div><!-- /page -->
 
+<div data-role="page" id="progstrengthsolo">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content" class="center">
+		<div>
+			<h1>Challenge in Progress</h1>
+			<p>20% Complete</p>
+			<p>Check off the boxes as you complete the exercises. Do 5 repetitions to do the standard workout, and 10 repetitions for an extra challenge.</p>
+		</div>
+	
+		<div id="progline" style="margin-bottom: 2vh;">
+			<a href="#popupBasic2" data-rel="popup" data-position-to="window">
+				<div id="progline">
+
+				</div>
+			</a>
+			
+			<img src="img/gym me.png" class="me" style="left: 0%; width: 6vw;">
+			<img src="img/flag.png" style="right: -4vw;">
+			<div id="line">
+				<img src="img/lineline.png">
+			</div>	
+		</div>
+		
+
+		<div>
+			<ul data-role="listview" data-inset="true">     
+				<label><input type="checkbox" name="checkbox-0"/> Push Ups</label>
+				<label><input type="checkbox" name="checkbox-0"/> Chair Dips </label>
+				<label><input type="checkbox" name="checkbox-0"/> Bicep Curls </label>        
+			</ul>
+		</div>
+		
+
+		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:2vh;">
+			<p>Catherine just sent you a thumbs up!</p>
+		</div>
+	<!--
+		<div>
+			<a class="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Simulate Workout Progress</a>
+		</div>
+		-->
+
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#newsfeed" data-iconpos="right" data-icon="arrow-r">I'm done for now!</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->
+
 <div data-role="page" id="everest">
 
 	<div data-role="header" data-id="header" data-position="fixed">
@@ -1023,8 +1228,19 @@
 	
 		</div>
 		
-		<a href="#neweverest" data-role="button" data-inline="true">Go Solo</a>
-		<a href="#teameverest" data-role="button" data-inline="true">Add Teammates</a>	
+		<a href="#ev1solo" data-role="button" data-rel="popup">Go Solo</a>
+		<div data-role="popup" id="ev1solo" data-overlay-theme="b">
+		  <div data-role="main" class="ui-content">
+		  	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><br>
+		  	<p>Is this your first time doing the challenge?</p>
+		  	<p>Check out the demo, or proceed to the workout!</p>
+			<a href="#videoeverestsolo" data-role="button" data-inline="true">Go to Demo</a>
+			<a href="#progeverestsolo" data-role="button" data-inline="true">Start Challenge!</a>
+			</div>
+		</div>
+		
+		<a href="#teameverest" data-role="button">Add Teammates</a>	
+
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-id="navbar" data-position="fixed">
@@ -1049,8 +1265,19 @@
 	
 		</div>
 		
-		<a href="#neweverest" data-role="button" data-inline="true">Go Solo</a>
-		<a href="#teameverest" data-role="button" data-inline="true">Add Teammates</a>	
+		<a href="#ev2solo" data-role="button" data-rel="popup">Go Solo</a>
+		<div data-role="popup" id="ev2solo" data-overlay-theme="b">
+		  <div data-role="main" class="ui-content">
+		  	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><br>
+		  	<p>Is this your first time doing the challenge?</p>
+		  	<p>Check out the demo, or proceed to the workout!</p>
+			<a href="#videoeverestsolo" data-role="button" data-inline="true">Go to Demo</a>
+			<a href="#progeverestsolo" data-role="button" data-inline="true">Start Challenge!</a>
+			</div>
+		</div>
+		
+		<a href="#teameverest" data-role="button">Add Teammates</a>		
+
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-id="navbar" data-position="fixed">
@@ -1095,40 +1322,63 @@
 				</div>
 				</a>
 			</div>
+
+		<a href="#evteam" data-role="button" data-rel="popup">Start</a>
+		<div data-role="popup" id="evteam" data-overlay-theme="b">
+		  <div data-role="main" class="ui-content">
+		  	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><br>
+		  	<p>Is this your first time doing the challenge?</p>
+		  	<p>Check out the demo, or proceed to the workout!</p>
+			<a href="#videoeverest" data-role="button" data-inline="true">Go to Demo</a>
+			<a href="#progeverest" data-role="button" data-inline="true">Start Challenge!</a>
+			</div>
+		</div>
+
 	</div><!--content-->
 	
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#everest" data-iconpos="left" data-icon="arrow-l">Back</a></li>
-				<li><a href="#neweverest" data-iconpos="right" data-icon="arrow-r">Next</a></li>
 			</ul>
 		</div>
 	</div>
 	
 </div><!-- /page -->
 
-<div data-role="page" id="neweverest">
+<div data-role="page" id="videoeverestsolo">
 
 	<div data-role="header" data-id="header" data-position="fixed">
 		<h1>FitFeats</h1>
 	</div>
-
+	
 	<div data-role="content" class="center">
-		
+	
 		<div>
-			<h1>Is this your first time doing this workout?</h1>
-			<h3>Check out the demo, or proceed to workout!</h3>
-			<a href="#videoeverest" data-role="button" data-inline="true">Go to Demo</a>
-			<a href="#progeverest" data-role="button" data-inline="true">Start Challenge!</a>
+			<h2>This challenge alternates power-walking with squats. Check out proper form for these two types of exercises below.</h2>
 		</div>
+		
+		<h3>How to power-walk:</h3>
+		<iframe width="420" height="315"
+			src="https://www.youtube.com/embed/dgo0ip7gjxg">
+		</iframe>
+		
+		<h3>How to do a squat:</h3> 
+		<p>Make sure to keep your knees over your feet to avoid injury.<p>
+		<iframe width="420" height="315"
+			src="https://www.youtube.com/embed/UXJrBgI2RxA">
+		</iframe>
 
+		<h2>IMPORTANT: If you feel discomfort or pain at any time, stop the workout to avoid injury!</h2>
+		
 	</div><!--content-->
 	
+
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#everest" data-iconpos="left" data-icon="arrow-l">Back</a></li>
+				<li><a href="#progeverestsolo" data-iconpos="right" data-icon="arrow-r">Start Challenge!</a></li>
 			</ul>
 		</div>
 	</div>
@@ -1227,6 +1477,55 @@
 				setInterval("changeText('everestText')", 500);
 			</script>
 			<p id="everestText">Catherine just sent you a thumbs up!</p>
+		</div>
+
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-id="navbar" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#newsfeed" data-iconpos="right" data-icon="arrow-r">I'm done for now!</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->
+
+<div data-role="page" id="progeverestsolo">
+
+	<div data-role="header" data-id="header" data-position="fixed">
+		<h1>FitFeats</h1>
+	</div>
+
+	<div data-role="content" class="center">
+		<div>
+			<h1>Challenge in Progress</h1>
+			<p>20% Complete</p>
+			<p>Check off the boxes as you complete the exercises. Do 5 repetitions to do the standard workout, and 10 repetitions for an extra challenge.</p>
+		</div>
+	
+		<div id="progline">
+			<a href="#popupBasic3" data-rel="popup" data-position-to="window">
+				<div id="progline">
+
+				</div>
+			</a>
+			<img src="img/hikingman me.png" class="me" style="left: 0%">
+			
+			<img src="img/flag.png" style="right: -4vw;">
+		
+			<div id="line"><img src="img/lineline.png"></div>	
+			
+		</div>
+		
+		<div>
+			<ul data-role="listview" data-inset="true">     
+				<label><input type="checkbox" name="checkbox-0"/> Power Walking </label>
+				<label><input type="checkbox" name="checkbox-1"/> Squats </label>
+			</ul>
+		</div>
+		
+		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:2vh;">
+			<p>Catherine just sent you a thumbs up!</p>
 		</div>
 
 	</div><!-- /content -->
