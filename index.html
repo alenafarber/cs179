@@ -1054,10 +1054,9 @@
 					
 				</div>
 			</a>
-			<img src="img/run me.png" class="me" style="left: 0%">
+			<img src="img/run me.png" id="run-me" class="me" style="left: 0%">
 			<img src="img/flag.png" style="right: -4vw;">
-			<div id="line"><img src="img/lineline.png"></div>	
-			
+			<div class="line"><img src="img/lineline.png"></div>	
 		</div>
 		
 		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:10vh;">
@@ -1065,7 +1064,7 @@
 		</div>
 	
 		<div>
-			<a class="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Simulate Workout Progress</a>
+			<a id="run-button" class="ui-btn ui-input-btn ui-shadow" data-inline="true" onclick="run()">Simulate Workout Progress</a>
 		</div>
 
 	</div><!-- /content -->
@@ -1192,10 +1191,11 @@
 		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:2vh;">
 			<p>Catherine just sent you a thumbs up!</p>
 		</div>
-	
+	<!--
 		<div>
 			<a class="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Simulate Workout Progress</a>
 		</div>
+		-->
 
 	</div><!-- /content -->
 	
@@ -1515,10 +1515,6 @@
 		
 		<div class="ui-body ui-body-a ui-corner-all center" style="margin-bottom:2vh;">
 			<p>Catherine just sent you a thumbs up!</p>
-		</div>
-	
-		<div>
-			<a class="motion" class="ui-btn ui-input-btn ui-shadow" data-inline="true">Simulate Workout Progress</a>
 		</div>
 
 	</div><!-- /content -->
