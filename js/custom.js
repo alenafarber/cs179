@@ -52,7 +52,7 @@ var texts = {runText: ["Wow! You just zoomed by all the traffic in Times Square!
 			runSolo: ["Wow! You just zoomed by all the traffic in Times Square!", 
 						"You just passed the Empire State Building. Over halfway there!", 
 						"The birds are chirping in Washington Square Park. Here comes the home stretch!"], 
-			strengthSolo: ["You've lifted the weight of the BMW’s eight-cylinder engine already! Keep going!", 
+			strengthSolo: ["You've lifted the weight of the BMW's eight-cylinder engine already! Keep going!", 
 							"Put some more elbow grease into it! You're over halfway there.", 
 							"Wow - the BMW's beginning to come off the ground!"], 
 			everestSolo: ["Tourists at the base of the mountain watch in awe as you embark on your climb!", 
