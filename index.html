@@ -349,52 +349,29 @@
 		   <option value="1hr">1 hour</option>
 		   <option value="1hr30m">1 hour 30 min</option>
 		   <option value="2hr">2 hours+</option>
-		</select>
+		</select>		
+	</div>
 
-		<br/>
-		
-	</div><!-- /content -->
+		<p style="text-align:center; font-size:1.5em">I want to:</p>		
+		<div>
+			<ul data-role="listview" data-inset="true">     
+				<label><input type="checkbox" id="checkweight" name="checkbox-0"/> Lose weight</label>
+				<label><input type="checkbox" id="checkstrong" name="checkbox-0"/> Get stronger </label>
+				<label><input type="checkbox" id="checkincr" name="checkbox-0"/> Increase endurance </label>        
+			</ul>
+		</div>
+
+	<!-- /content -->
 
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 		<ul>
 			<li><a href="#newsfeed" data-iconpos="left" data-icon="arrow-l">Cancel</a></li> <!-- back to Newsfeed, not implemented yet -->
-			<li><a href="#goals" data-iconpos="right" data-icon="arrow-r">Next</a></li>
-		</ul>
-	</div>
-	</div><!-- /footer -->
-
-</div><!-- /page -->
-
-
-<div data-role="page" id="goals">
-	
-	
-	<div data-role="header" data-id="header" data-position="fixed">
-		<h1>FitFeats</h1>
-	</div>
-
-	<div data-role="content" id="check1">
-		<p style="text-align:center; font-size:1.5em">I want to:</p>
-		
-		<div>
-		<ul data-role="listview" data-inset="true">     
-			<label><input type="checkbox" id="checkweight" name="checkbox-0"/> Lose weight</label>
-			<label><input type="checkbox" id="checkstrong" name="checkbox-0"/> Get stronger </label>
-			<label><input type="checkbox" id="checkincr" name="checkbox-0"/> Increase endurance </label>        
-		</ul>
-		</div>
-	</div><!-- /content -->
-	
-	<div data-role="footer" data-id="navbar" data-position="fixed">
-		<div data-role="navbar">
-		<ul>
-			<li><a href="#time" data-iconpos="left" data-icon="arrow-l">Back</a></li>
 			<li><a href="#focus" id="next" data-iconpos="right" data-icon="arrow-r">Next</a></li>
 		</ul>
 	</div>
 	</div><!-- /footer -->
-	
+
 	<script>
 		function save(obj, key){
 			var savehtml = JSON.stringify(obj);
@@ -425,7 +402,6 @@
 			}
 		});
 	</script>
-	
 </div><!-- /page -->
 
 
@@ -454,7 +430,7 @@
 	<div data-role="footer" data-id="navbar" data-position="fixed">
 		<div data-role="navbar">
 		<ul>
-			<li><a href="#goals" data-iconpos="left" data-icon="arrow-l">Back</a></li>
+			<li><a href="#time" data-iconpos="left" data-icon="arrow-l">Back</a></li>
 			<li><a href="#easy" data-iconpos="right" data-icon="arrow-r">Next</a></li>
 		</ul>
 	</div>
